@@ -1,0 +1,509 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+}
+ 
+
+body {
+    font-family: "Noto Sans TC", sans-serif;
+    font-weight: 400;
+    letter-spacing: 1px;
+    background-image: url("pic/bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 0px 20px;
+}
+
+header {
+    height: 80px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+
+header ul {
+    display: flex;
+    list-style: none;
+}
+
+header li {
+    margin-right: 3vw;
+}
+
+header a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    font-weight:normal;
+}
+
+.about-link {
+    color: #000;
+    text-decoration: none;
+    position: relative;
+    display: inline-block;
+}
+
+.about-link::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -3px;
+    width: 0;
+    height: 2px;
+    background-color: #101010;
+    transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+}
+
+.about-link:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+.active-link {
+    color: #000000;
+    font-weight: bolder;
+    text-decoration: none;
+    border-bottom: 2px solid currentColor;
+}
+
+#menu-button {
+    display: none;
+    background-color: #101010;
+    color: rgb(0, 0, 0);
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+}
+
+#menu-button:focus {
+    outline: none;
+}
+
+.info-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 3vw;
+}
+
+.left-block {
+    flex: 0 0 100%; 
+    max-width: 300px;
+    margin-bottom: 20px;
+    position: sticky;
+    top: 30px; 
+    align-self: flex-start;
+}
+
+.right-block {
+    flex: 1;
+    padding-left: 5vw;
+}
+
+.profile-pic {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #000;
+}
+
+.top-text h2 {
+    font-size: 48px;
+    margin-bottom: 10px;
+    color: rgb(0, 0, 0);
+}
+
+.bottom-text p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-top: 10px;
+    color: rgb(0, 0, 0);
+}
+
+.additional-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 2vw 5vw;
+}
+
+.additional-section .left-block {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.vertical-block {
+    padding: 10px;
+    background-color: #101010;
+    border-radius: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h3 {
+    margin: 0;
+    font-size: 24px;
+    color: #ffffff;
+}
+
+.text-content p, .text-content li {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+    color: #101010;
+    text-align: center;
+}
+
+.text-content p img, .text-content li img {
+    margin-right: 8px;
+}
+
+.text-content li {
+    justify-content: left;
+    text-align: left;
+}
+
+.additional-section .right-block {
+    flex: 1;
+    margin-left: 10px;
+}
+
+.personality-content ul {
+    display: flex;
+    flex-direction: column;
+}
+
+.personality-content .left {
+    flex: 1;
+}
+.personality-content .right {
+    flex: 0.5;
+}
+.red-block {
+    background-color: #101010;
+    color: rgb(255, 255, 255);
+    padding: 10px;
+    border-radius: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.rectangles-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+
+.rectangle-wrapper {
+    width: 100%;
+}
+
+.rectangle-wrapper h3 {
+    margin: 0;
+    font-size: 20px;
+    color: #101010;
+    padding-bottom: 10px;
+}
+
+.rectangle {
+    background-color:rgba(255, 255, 255, 0.3);
+    color: #101010;
+    border: 1px solid #101010;
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: left;
+}
+
+.rectangle h5 {
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #101010;
+}
+
+.rectangle p {
+    font-size: 16px;
+}
+
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #101010;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.back-to-top:hover {
+    background-color: #4e4e4e;
+}
+
+.back-to-top.show {
+    opacity: 1;
+}
+
+@media (max-width: 768px) {
+    header {
+        height: 40px; /* 调整头部的高度 */
+
+    }
+
+    header ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 45px;
+        right: 0;
+        background-color: rgba(255, 255, 255, 0.9);
+        width: 100%;
+        padding:10px;
+        text-align: right;
+        transition: max-height 0.5s ease-out;
+        overflow: hidden;
+        max-height: 0;
+        z-index: 10000;
+    }
+    
+    header ul.show {
+        display: flex;
+        max-height: 300px; /* 展开后的最大高度 */
+    }
+    
+    header li {
+        display: flex;
+        margin: 10px 0;
+        padding-left: 15px;
+        font-size: 12px;
+        text-align: right;
+    }
+
+    header li :hover{
+        background-color: rgba(100, 100, 100, 0.9);
+    }
+
+    .active-link {
+        text-align: right;
+        width: fit-content;
+    }
+
+    #menu-button {
+        display: block;
+        background-color: rgba(0, 0, 0, 0);
+        color: rgb(0, 0, 0);
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+        padding: 10px;
+        position: relative;
+        border-radius: 100px;
+    }
+
+    /* 菜单按钮的三条横线 */
+    #menu-button .bar {
+        display: block;
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        background-color: rgb(0, 0, 0);
+        transition: all 0.3s;
+        border-radius: 100px;
+    }
+
+    /* 菜单按钮变成叉的动画效果 */
+    #menu-button.change .bar1 {
+        transform: rotate(-45deg) translate(-5px, 6px);
+        border-radius: 100px;
+    }
+
+    #menu-button.change .bar2 {
+        opacity: 0;
+        border-radius: 100px;
+    }
+
+    #menu-button.change .bar3 {
+        transform: rotate(45deg) translate(-5px, -6px);
+        border-radius: 100px;
+    }
+    
+    .info-section {
+        flex-direction: column; /* 垂直排列 */
+        align-items: center; /* 居中对齐 */
+    }
+
+    .left-block, .right-block {
+        flex: 1; /* 垂直方向上均等分配空间 */
+        max-width: 100%; /* 最大宽度为 100% */
+        text-align: center; /* 中心对齐文本 */
+        padding-left: 0;
+    }
+
+    .profile-pic {
+        max-width: 60%; /* 适应手机屏幕 */
+    }
+
+    .top-text h2 {
+        font-size: 30px; /* 缩小字体大小 */
+        margin-bottom: 0px;
+    }
+
+    .bottom-text p{
+        display: none;
+    }
+    
+    .red-block {
+        font-size: 16px; /* 调整字体大小 */
+        padding: 10px;
+    }
+
+    .rectangle {
+        padding: 15px;
+    }
+
+    .rectangle h5 {
+        font-size: 16px;
+    }
+
+    .rectangle p {
+        font-size: 12px;
+    }
+
+    .back-to-top {
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+    }
+
+    .additional-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* 垂直居中对齐所有子元素 */
+    }
+
+    .left-block, .right-block {
+        width: 100%; /* 使每个块在小屏幕上占据整个宽度 */
+    }
+
+    .left-block {
+        margin-top: 20px;
+        position: static;
+    }
+
+    h3 {
+        font-size: 16px;
+    }
+
+    .rectangle-wrapper {
+        text-decoration: none;
+    }
+    
+   .rectangle-wrapper h3 {
+        text-align: left;
+        font-size: 16px;
+        color: #101010;
+        text-decoration: none !important; 
+        pointer-events: none !important; 
+    }
+
+
+    .rectangle-wrapper {
+        text-decoration: none !important; 
+        pointer-events: none !important;
+    }
+
+    .text-content {
+        font-size: 14px;
+    }
+
+    .back-to-top:hover {
+        background-color: #101010;
+    }
+
+}
+
+/* 非手机响应式下的样式 */
+@media (min-width: 769px) {
+    .toggle-button {
+        display: none; /* 隐藏展开按钮 */
+    }
+}
+.loading-page {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: linear-gradient(to right, #000000, #101010, #000000);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+    justify-content: center;
+    color: #191654;
+    z-index: 1000;
+    opacity: 1;
+    transition: opacity 1.5s ease; 
+}
+
+#svg {
+    height: 150px;
+    width: 150px;
+    stroke: white;
+    fill-opacity: 0;
+    stroke-width: 3px;
+    stroke-dasharray: 4500;
+    animation: draw 3s ease;
+}
+
+@keyframes draw {
+    0% {
+        stroke-dashoffset: 4500;
+    }
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+
+.name-container {
+    height: 30px;
+    overflow: hidden;
+}
+
+.logo-name {
+    color: #fff;
+    font-size: 20px;
+    letter-spacing: 12px;
+    text-transform: uppercase;
+    font-weight: bolder;
+}
+
+#loading-page, .logo-name {
+    transition: none;
+}
