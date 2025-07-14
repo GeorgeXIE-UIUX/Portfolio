@@ -10,10 +10,8 @@ body {
     font-family: "Noto Sans TC", sans-serif;
     font-weight: 400;
     letter-spacing: 1px;
-    background-image: url("pic/bg.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding: 0px 20px;
+    padding: 0 24px;
+    background-color: #1e1e1e;
 }
 
 header {
@@ -30,11 +28,11 @@ header ul {
 }
 
 header li {
-    margin-right: 3vw;
+    margin-right: 24px;
 }
 
 header a {
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     text-decoration: none;
     display: flex;
     align-items: center;
@@ -42,7 +40,7 @@ header a {
 }
 
 .about-link {
-    color: #000;
+    color: #ffffff;
     text-decoration: none;
     position: relative;
     display: inline-block;
@@ -55,7 +53,7 @@ header a {
     bottom: -3px;
     width: 0;
     height: 2px;
-    background-color: #101010;
+    background-color: #ffffff;
     transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
 }
 
@@ -65,7 +63,7 @@ header a {
 }
 
 .active-link {
-    color: #000000;
+    color: #ffffff;
     font-weight: bolder;
     text-decoration: none;
     border-bottom: 2px solid currentColor;
@@ -73,8 +71,8 @@ header a {
 
 #menu-button {
     display: none;
-    background-color: #101010;
-    color: rgb(0, 0, 0);
+    background-color: #ffffff;
+    color: rgb(255, 255, 255);
     border: none;
     font-size: 24px;
     cursor: pointer;
@@ -85,162 +83,278 @@ header a {
     outline: none;
 }
 
+.main-section {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 24px;
+      height: auto;
+      margin:48px 0;
+    }
+
+    .text-area {
+      flex: 3;
+    }
+
+    .text-area h1 {
+      color: #fff;
+      font-size: 84px;
+      line-height: 1.2;
+      margin-bottom: 24px;
+    }
+
+    .text-area p {
+      color: #b8b8b8;
+      font-size: 14px;
+      margin-bottom: 24px;
+    }
+
+    .scroll-down {
+      color: #b8b8b8;
+      font-size: 14px;
+      opacity: 0.7;
+      animation: float 2s ease-in-out infinite;
+    }
+    
+     @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+    
+    .image-area {
+      flex: 7;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-radius: 20px;
+      height: 500px;
+      background-color: #fff;
+    }
+
+    .image-area .left-image {
+      flex: 5;
+      height: 100%;
+      padding: 24px;
+    }
+
+    .image-area .left-image img {
+      width: auto;
+      height: 100%;
+      border-radius: 24px;
+    }
+
+    .image-area .right-text {
+      flex: 5;
+      color: #1e1e1e;
+      padding: 24px;
+    }
+
+    .image-area .right-text h1 {
+      font-size: 72px;
+    }
+
+    .image-area .right-text p {
+      font-size: 14px;
+    }
+
+  .card-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+  margin: 48px 0;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  color: #1e1e1e;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.card-header h3 {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.card-time {
+  font-size: 12px;
+  color: #666;
+}
+
+.card hr {
+  margin: 12px 0;
+  border: none;
+  border-top: 1px solid #ddd;
+}
+
+.card-list {
+  padding-left: 24px;
+}
+
+.card-list li {
+  margin-bottom: 8px;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
 .info-section {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: flex-start;
-    padding: 3vw;
+  display: flex;
+  gap: 24px;
+  margin: 48px 0;
+  align-items: stretch;
+  flex-wrap: wrap;   
 }
 
-.left-block {
-    flex: 0 0 100%; 
-    max-width: 300px;
-    margin-bottom: 20px;
-    position: sticky;
-    top: 30px; 
-    align-self: flex-start;
+.edu-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.right-block {
-    flex: 1;
-    padding-left: 5vw;
+.section-title {
+  font-size: 28px;
+  margin-bottom: 24px;
+  color: #ffffff;
+  border-left: 4px solid #ffffff;
+  padding-left: 12px;
 }
 
-.profile-pic {
-    width: 100%;
-    max-width: 300px;
-    height: auto;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 3px solid #000;
+.edu-list {
+  list-style: none;
+  padding-left: 0;
 }
 
-.top-text h2 {
-    font-size: 48px;
-    margin-bottom: 10px;
-    color: rgb(0, 0, 0);
+.edu-list li {
+  margin-bottom: 24px;
 }
 
-.bottom-text p {
-    font-size: 18px;
-    line-height: 1.6;
-    margin-top: 10px;
-    color: rgb(0, 0, 0);
+.edu-list h3 {
+  font-size: 24px;
+  margin-bottom: 8px;
+  color: #ffffff;
 }
 
-.additional-section {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    padding: 2vw 5vw;
+.edu-time {
+  font-size: 14px;
+  color: #b8b8b8;
 }
 
-.additional-section .left-block {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
+.edu-image {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  display: block;
+  transition: transform 0.3s ease;
 }
 
-.vertical-block {
-    padding: 10px;
-    background-color: #101010;
-    border-radius: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.edu-image:hover {
+  transform: scale(1.01);
 }
 
-h3 {
-    margin: 0;
-    font-size: 24px;
-    color: #ffffff;
+.skill-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
-.text-content p, .text-content li {
-    display: flex;
-    justify-content: center;
-    margin: 20px;
-    color: #101010;
-    text-align: center;
+.skill-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  height:100%;              
+  align-items: center;
+  justify-items: center; 
 }
 
-.text-content p img, .text-content li img {
-    margin-right: 8px;
+.icon-item {
+width: 30%;
+  aspect-ratio: 1 / 1;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform .3s;
 }
 
-.text-content li {
-    justify-content: left;
-    text-align: left;
+.icon-item img {
+   width: 60%;  
+  height: auto;
+  transition: transform 0.3s ease;
 }
 
-.additional-section .right-block {
-    flex: 1;
-    margin-left: 10px;
+.icon-item:hover {
+  transform: scale(1.05);
 }
 
-.personality-content ul {
-    display: flex;
-    flex-direction: column;
+.certificate-section {
+  margin: 48px 0;
 }
 
-.personality-content .left {
-    flex: 1;
-}
-.personality-content .right {
-    flex: 0.5;
-}
-.red-block {
-    background-color: #101010;
-    color: rgb(255, 255, 255);
-    padding: 10px;
-    border-radius: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    text-align: center;
-    margin-bottom: 20px;
-    font-size: 24px;
+.certificate-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  margin-top: 24px;
 }
 
-.rectangles-container {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    width: 100%;
+.certificate-card {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  color: #1e1e1e;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease;
 }
 
-.rectangle-wrapper {
-    width: 100%;
+.certificate-card:hover {
+  transform: translateY(-5px);
 }
 
-.rectangle-wrapper h3 {
-    margin: 0;
-    font-size: 20px;
-    color: #101010;
-    padding-bottom: 10px;
+
+.certificate-card .card-header {
+  display: flex;
+  flex-direction: column; 
+  align-items: flex-start;
+  gap: 4px;         
 }
 
-.rectangle {
-    background-color:rgba(255, 255, 255, 0.3);
-    color: #101010;
-    border: 1px solid #101010;
-    padding: 20px;
-    border-radius: 10px;
-    width: 100%;
-    box-sizing: border-box;
-    text-align: left;
+.certificate-card h3 {
+  font-size: 16px;
+  font-weight: 700;
 }
 
-.rectangle h5 {
-    margin-bottom: 10px;
-    font-size: 18px;
-    color: #101010;
+.certificate-card .card-time {
+  font-size: 14px;
+  color: #666;
 }
 
-.rectangle p {
-    font-size: 16px;
+.certificate-card hr {
+  margin: 12px 0;
+  border: none;
+  border-top: 1px solid #ccc;
+}
+
+.certificate-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: contain;
 }
 
 .back-to-top {
@@ -272,7 +386,7 @@ h3 {
 
 @media (max-width: 768px) {
     header {
-        height: 40px; /* 调整头部的高度 */
+        height: 40px;
 
     }
 
@@ -282,7 +396,7 @@ h3 {
         position: absolute;
         top: 45px;
         right: 0;
-        background-color: rgba(255, 255, 255, 0.9);
+        background-color: rgba(0, 0, 0, 0.9);
         width: 100%;
         padding:10px;
         text-align: right;
@@ -294,7 +408,7 @@ h3 {
     
     header ul.show {
         display: flex;
-        max-height: 300px; /* 展开后的最大高度 */
+        max-height: 300px;
     }
     
     header li {
@@ -316,8 +430,8 @@ h3 {
 
     #menu-button {
         display: block;
-        background-color: rgba(0, 0, 0, 0);
-        color: rgb(0, 0, 0);
+        background-color: rgba(255, 255, 255, 0);
+        color: rgb(255, 255, 255);
         border: none;
         font-size: 24px;
         cursor: pointer;
@@ -326,18 +440,16 @@ h3 {
         border-radius: 100px;
     }
 
-    /* 菜单按钮的三条横线 */
     #menu-button .bar {
         display: block;
         width: 25px;
         height: 3px;
         margin: 5px auto;
-        background-color: rgb(0, 0, 0);
+        background-color: rgb(255, 255, 255);
         transition: all 0.3s;
         border-radius: 100px;
     }
 
-    /* 菜单按钮变成叉的动画效果 */
     #menu-button.change .bar1 {
         transform: rotate(-45deg) translate(-5px, 6px);
         border-radius: 100px;
@@ -352,94 +464,102 @@ h3 {
         transform: rotate(45deg) translate(-5px, -6px);
         border-radius: 100px;
     }
-    
-    .info-section {
-        flex-direction: column; /* 垂直排列 */
-        align-items: center; /* 居中对齐 */
+    .main-section {
+        flex-direction: column;
+        padding: 24px 0;
+        margin: 24px 0;
     }
 
-    .left-block, .right-block {
-        flex: 1; /* 垂直方向上均等分配空间 */
-        max-width: 100%; /* 最大宽度为 100% */
-        text-align: center; /* 中心对齐文本 */
-        padding-left: 0;
+    .text-area {
+        flex: none;
+        width: 100%;
+        text-align: center;
     }
 
-    .profile-pic {
-        max-width: 60%; /* 适应手机屏幕 */
+    .text-area h1 {
+        font-size: 40px;
     }
 
-    .top-text h2 {
-        font-size: 30px; /* 缩小字体大小 */
-        margin-bottom: 0px;
+    .text-area p {
+        font-size: 14px;
     }
 
-    .bottom-text p{
-        display: none;
-    }
-    
-    .red-block {
-        font-size: 16px; /* 调整字体大小 */
-        padding: 10px;
-    }
-
-    .rectangle {
-        padding: 15px;
+    .image-area {
+        flex-direction: column;
+        height: auto;
+        padding: 0;
+        border-radius: 12px;
+        overflow: hidden;
+        margin-top: 24px;
     }
 
-    .rectangle h5 {
-        font-size: 16px;
+    .image-area .left-image,
+    .image-area .right-text {
+        width: 100%;
+        padding: 16px;
     }
 
-    .rectangle p {
+    .image-area .left-image img {
+        width: 100%;
+        height: auto;
+    }
+
+    .image-area .right-text h1 {
+        font-size: 32px;
+        margin-bottom: 12px;
+    }
+
+    .image-area .right-text p {
         font-size: 12px;
+        line-height: 1.6;
     }
 
+     .card-section {
+  margin: 24px 0;
+}
+
+  .card {
+    padding: 16px;
+  }
+
+  .card-header h3 {
+    font-size: 16px;
+  }
+
+  .card-time {
+    font-size: 12px;
+  }
+
+  .card-list li {
+    font-size: 12px;
+    line-height: 1.5;
+  }
+
+  .info-section {
+    flex-direction: column;
+    margin: 24px 0;
+  }
+
+  .section-title {
+    font-size: 24px;
+  }
+
+  .skill-grid {
+    gap: 16px;
+  }
+
+  .icon-item {
+    border-radius: 8px;
+  }
+
+  .certificate-section {
+  margin: 24px 0;
+}
+    
     .back-to-top {
         width: 40px;
         height: 40px;
         font-size: 20px;
-    }
-
-    .additional-section {
-        display: flex;
-        flex-direction: column;
-        align-items: center; /* 垂直居中对齐所有子元素 */
-    }
-
-    .left-block, .right-block {
-        width: 100%; /* 使每个块在小屏幕上占据整个宽度 */
-    }
-
-    .left-block {
-        margin-top: 20px;
-        position: static;
-    }
-
-    h3 {
-        font-size: 16px;
-    }
-
-    .rectangle-wrapper {
-        text-decoration: none;
-    }
-    
-   .rectangle-wrapper h3 {
-        text-align: left;
-        font-size: 16px;
-        color: #101010;
-        text-decoration: none !important; 
-        pointer-events: none !important; 
-    }
-
-
-    .rectangle-wrapper {
-        text-decoration: none !important; 
-        pointer-events: none !important;
-    }
-
-    .text-content {
-    font-size: 12px;
     }
 
     .back-to-top:hover {
@@ -448,12 +568,6 @@ h3 {
 
 }
 
-/* 非手机响应式下的样式 */
-@media (min-width: 769px) {
-    .toggle-button {
-        display: none; /* 隐藏展开按钮 */
-    }
-}
 .loading-page {
     position: fixed;
     top: 0;
