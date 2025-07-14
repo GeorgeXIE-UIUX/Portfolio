@@ -136,7 +136,7 @@ header a {
 
 .banner-image {
     flex: 1;
-    text-align: center;
+    text-align: right;
     margin: 0;
 }
 
@@ -240,7 +240,7 @@ header a {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 70px;
+    margin-bottom: 20px;
 }
 
 .title h1 {
@@ -459,16 +459,16 @@ header a {
         display: flex;
         flex-direction: column-reverse;
         align-items: center;
-        margin-bottom: 50px;
     }
     
     .banner-text, .banner-image {
         padding: 0;
-        margin-bottom: 20px;
     }
     
     .banner-image {
-        width: 80%;
+    width: 100%;
+    text-align: left;
+    margin-bottom: 20px;
     }
     
     .banner h1 {
@@ -476,6 +476,7 @@ header a {
     }
     
     .banner p {
+        margin: 0;
         font-size: 16px;
     }
 

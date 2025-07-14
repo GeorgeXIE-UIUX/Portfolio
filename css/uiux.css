@@ -65,8 +65,8 @@ header a {
 .active-link {
     color: #000000;
     font-weight: bolder;
-    text-decoration: none; /* 移除下劃線 */
-    border-bottom: 2px solid currentColor; /* 模擬下劃線 */
+    text-decoration: none; 
+    border-bottom: 2px solid currentColor;
 }
 
 #menu-button {
@@ -136,8 +136,7 @@ header a {
 
 .banner-image {
     flex: 1;
-    text-align: center;
-    margin: 0;
+    text-align: right;
 }
 
 .banner-image img {
@@ -145,66 +144,59 @@ header a {
     height: auto;
 }
 
-.case-studies {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 50px;
-    max-width: 100%;
-    margin: 50px auto;
-    justify-items: center;
-    align-items: center;
+.portfolio {
+  padding: 50px;
 }
 
-.case {
-   display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    max-width: 370px;
-    background-color: #ffffff;
-    border-radius: 10px;
-    overflow: hidden;
-    position: relative;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    height: 100%;
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
 }
 
-.image-container {
-    width: 100%;
-    padding-top: 100%; 
-    position: relative; 
-    overflow: hidden;
-    border-radius: 10px 10px 0px 0px;
+.portfolio-item {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
-.image-container img {
-    background-color: #ffffff;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    object-fit: cover;
-    
+.image-wrapper {
+  width: 100%;
+  aspect-ratio: 808 / 632;
+  overflow: hidden;
+  position: relative;
 }
 
-.case:hover .image-container img {
-    transform: scale(1.1);
-    transition: transform 0.5s;
+.image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+  display: block;
 }
 
-.case h2 {
-    padding: 20px 20px 0px 20px;
-    font-size: 1.5rem;
-    color: #101010;
+.image-wrapper:hover img {
+  transform: scale(1.1);
 }
 
-.case p {
-    padding: 20px;
-    font-size: 1rem;
-    color: #101010;
+.portfolio-item img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 808 / 632;
+  object-fit: cover;
+  display: block;
 }
 
-.case a {
+.portfolio-item h2 {
+  font-size: 16px;
+  padding: 20px;
+  text-align: left;
+  color: #333;
+}
+
+.portfolio-item a {
     display: block;
     padding: 20px;
     text-align: right;
@@ -218,7 +210,7 @@ header a {
     margin-top: auto;
 }
 
-.case a::before {
+.portfolio-item a::before {
     content: '';
     position: absolute;
     top: 0;
@@ -231,15 +223,15 @@ header a {
     z-index: 0;
 }
 
-.case a:hover::before {
+.portfolio-item a:hover::before {
     left: 0;
 }
 
-.case a:hover {
+.portfolio-item a:hover {
     color: #ffffff;
 }
 
-.case a span {
+.portfolio-item a span {
     position: relative;
     z-index: 1;
 }
@@ -335,16 +327,16 @@ header a {
         display: flex;
         flex-direction: column-reverse;
         align-items: center;
-        margin-bottom: 50px;
     }
     
     .banner-text, .banner-image {
         padding: 0;
-        margin-bottom: 20px;
     }
     
     .banner-image {
-        width: 80%;
+    width: 100%;
+    text-align: left;
+    margin-bottom: 20px;
     }
     
     .banner h1 {
@@ -352,35 +344,16 @@ header a {
     }
     
     .banner p {
+        margin: 0;
         font-size: 16px;
     }
 
-    .case-studies {
-      max-width: 100%;
-       padding: 0px 20px;
-        display: flex;
-        flex-direction: column;
-    }
-
-    .case {
-        max-width: 100%; 
-        margin: 0px auto;
-    }
-
-    .case p {
-        padding: 20px 20px 0 20px;
-        margin-bottom: 20px;
-    }
-
-    .case a {
-        padding: 20px;
-        background-color: #101010;
-        color: #ffffff;
-    }
-
-    .case a::before {
-        content: none;
-    }
+    .portfolio {
+  padding: 0 50px;
+}
+    .portfolio-grid {
+    grid-template-columns: 1fr;
+  }
 
     .back-to-top:hover {
         background-color: #101010;
