@@ -2,16 +2,16 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    
 }
-
+ 
 
 body {
     font-family: "Noto Sans TC", sans-serif;
     font-weight: 400;
     letter-spacing: 1px;
-    background-image: url("pic/bg.png");
-    background-repeat: no-repeat;
-    background-size: cover;
+    padding: 0 96px;
+    background-color: #1e1e1e;
 }
 
 header {
@@ -28,11 +28,11 @@ header ul {
 }
 
 header li {
-    margin-right: 3vw;
+    margin-right: 24px;
 }
 
 header a {
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     text-decoration: none;
     display: flex;
     align-items: center;
@@ -40,7 +40,7 @@ header a {
 }
 
 .about-link {
-    color: #000;
+    color: #ffffff;
     text-decoration: none;
     position: relative;
     display: inline-block;
@@ -53,7 +53,7 @@ header a {
     bottom: -3px;
     width: 0;
     height: 2px;
-    background-color: #101010;
+    background-color: #ffffff;
     transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
 }
 
@@ -63,16 +63,16 @@ header a {
 }
 
 .active-link {
-    color: #000000;
+    color: #ffffff;
     font-weight: bolder;
     text-decoration: none;
     border-bottom: 2px solid currentColor;
 }
-  
+
 #menu-button {
     display: none;
-    background-color: #101010;
-    color: rgb(0, 0, 0);
+    background-color: #ffffff;
+    color: rgb(255, 255, 255);
     border: none;
     font-size: 24px;
     cursor: pointer;
@@ -125,12 +125,12 @@ header a {
 .banner h1 {
     white-space:nowrap;
     font-size:80px;
-    color: #101010;
+    color: #ffffff;
 }
 
 .banner p {
     font-size: 18px;
-    color: #999;
+    color: #b8b8b8;
     margin-top: 20px;
 }
 
@@ -141,7 +141,7 @@ header a {
 }
 
 .banner-image img {
-    max-width: 70%;
+    max-width: 90%;
     height: auto;
 }
 
@@ -154,7 +154,7 @@ header a {
 }
 
 .item {
-   background-color: rgb(255, 255, 255,0.5);
+
     text-align: center;
     padding: 5px;
     box-sizing: border-box;
@@ -179,6 +179,14 @@ header a {
 
 
 @media (max-width: 768px) {
+    body {
+    padding: 0 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+   } 
+
     header {
         height: 40px;
 
@@ -190,7 +198,7 @@ header a {
         position: absolute;
         top: 45px;
         right: 0;
-        background-color: rgba(255, 255, 255, 0.9);
+        background-color: rgba(0, 0, 0, 0.9);
         width: 100%;
         padding:10px;
         text-align: right;
@@ -202,7 +210,7 @@ header a {
     
     header ul.show {
         display: flex;
-        max-height: 300px; /* 展开后的最大高度 */
+        max-height: 300px;
     }
     
     header li {
@@ -221,12 +229,11 @@ header a {
         text-align: right;
         width: fit-content;
     }
-    
-    /* 菜单按钮的样式 */
+
     #menu-button {
         display: block;
-        background-color: rgba(0, 0, 0, 0);
-        color: rgb(0, 0, 0);
+        background-color: rgba(255, 255, 255, 0);
+        color: rgb(255, 255, 255);
         border: none;
         font-size: 24px;
         cursor: pointer;
@@ -235,18 +242,16 @@ header a {
         border-radius: 100px;
     }
 
-    /* 菜单按钮的三条横线 */
     #menu-button .bar {
         display: block;
         width: 25px;
         height: 3px;
         margin: 5px auto;
-        background-color: rgb(0, 0, 0);
+        background-color: rgb(255, 255, 255);
         transition: all 0.3s;
         border-radius: 100px;
     }
 
-    /* 菜单按钮变成叉的动画效果 */
     #menu-button.change .bar1 {
         transform: rotate(-45deg) translate(-5px, 6px);
         border-radius: 100px;
@@ -272,6 +277,7 @@ header a {
         display: flex;
         flex-direction: column-reverse;
         align-items: center;
+        padding: 0;
     }
     
     .banner-text, .banner-image {
@@ -294,7 +300,9 @@ header a {
     }
 
     .gallery{
-        padding: 0 50px;
+        margin: 48px 0;
+        padding: 0;
+        column-count:3;
     }
 
     .back-to-top:hover {
