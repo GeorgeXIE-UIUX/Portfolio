@@ -140,7 +140,7 @@ header a {
 }
 
 .banner-image img {
-    max-width: 90%;
+    width: 500px;
     height: auto;
 }
 
@@ -471,9 +471,10 @@ header a {
     }
     
     .banner-image {
-    width: 100%;
+    width: 100px;
+    height: auto;
     text-align: left;
-    margin-bottom: 20px;
+    margin-bottom: 24px;
     }
     
     .banner h1 {
