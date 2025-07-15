@@ -29,12 +29,5 @@ document.addEventListener('DOMContentLoaded', function () {
             nav.style.maxHeight = isNavVisible ? `${nav.scrollHeight}px` : '0';
         });
     }
-
-    // Toggle bottom-text and button styles when toggle button is clicked
-    if (toggleBottomTextButton && bottomText) {
-        toggleBottomTextButton.addEventListener('click', function () {
-            const isExpanded = bottomText.classList.toggle('expanded');
-            toggleBottomTextButton.classList.toggle('expanded', isExpanded);
-        });
-    }
 });
+

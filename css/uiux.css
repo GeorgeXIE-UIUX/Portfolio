@@ -236,6 +236,47 @@ header a {
     z-index: 1;
 }
 
+.loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #1e1e1e;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    z-index: 9999;
+}
+
+.loading-gif {
+    width: 30px;
+    height: auto;
+    margin-bottom: 8px;
+}
+
+.progress-bar {
+    width: 150px;
+    height: 3px;
+    background: #1e1e1e;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 8px;
+}
+
+.progress {
+    height: 100%;
+    width: 0%;
+    background-color: #ffffff;
+    transition: width 0.1s;
+}
+
+.percentage {
+    font-size: 12px;
+}
+
 @media (max-width: 768px) {
     body {
     padding: 0 24px;
@@ -342,9 +383,8 @@ header a {
         padding: 0;
     }
     
-    .banner-image {
-    width: 100px;
-    height: auto;
+   .banner-image {
+    width: 100%;
     text-align: left;
     margin-bottom: 24px;
     }
