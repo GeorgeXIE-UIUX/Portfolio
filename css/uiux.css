@@ -159,11 +159,14 @@ header a {
 }
 
 .portfolio-item {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
   background: white;
   border-radius: 12px;
   overflow: hidden;
-  text-align: center;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+
 }
 
 .image-wrapper {
