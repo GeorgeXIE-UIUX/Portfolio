@@ -368,9 +368,9 @@ header a {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background-color: #101010;
+    border: 1px  solid #fff;
+    background-color: #1e1e1e;
     color: white;
-    border: none;
     border-radius: 50%;
     width: 50px;
     height: 50px;
@@ -389,6 +389,58 @@ header a {
 
 .back-to-top.show {
     opacity: 1;
+}
+
+footer {
+    background-color: #1e1e1e;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    border-top: 2px solid #333;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 36px;
+}
+
+.footer-item {
+    text-align: center;
+}
+
+.footer-item a {
+    text-decoration: none;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer img {
+    width: 40px;
+    margin-bottom: 8px;
+    filter: brightness(0) invert(1);
+    transition: transform 0.3s;
+}
+
+footer a:hover img {
+    transform: translateY(-5px);
+}
+
+footer p {
+    margin: 0;
+    font-size: 12px;
+    color: #ffffff;
+}
+
+.copyright{
+  font-size: 8px;
+  color: #ffffff;
+  text-align: center;
 }
 
 @media (max-width: 768px) {
