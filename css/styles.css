@@ -155,7 +155,7 @@ header a {
       color: #1e1e1e;
     }
     
-    .image-area .right-text h1 {
+    .image-area .right-text h2 {
       font-size: 36px;
       margin-bottom: 12px;
     }
@@ -570,7 +570,7 @@ footer p {
       height: auto;
     }
   
-    .image-area .right-text h1 {
+    .image-area .right-text h2 {
       font-size: 32px;
       text-align: center;
     }
