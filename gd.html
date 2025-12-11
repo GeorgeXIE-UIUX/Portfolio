@@ -2,114 +2,166 @@
 <html lang="zh-TW">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GRAPHIC DESIGN</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Graphic Design | 謝宙錡 GeorgeXIE</title>
+    <meta name="description" content="Graphic Design Portfolio - George XIE">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;700&family=Noto+Serif+TC:wght@300;500;700&family=Raleway:wght@300;500&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="css/gd.css">
-   <link rel="icon" type="image/png" href="css/pic/ICON-14.png">
-   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-
+    <link rel="icon" type="image/png" href="css/pic/ICON-14.png">
 </head>
+
 <body>
+    <div class="noise-overlay"></div>
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <div id="loading-screen">
+        <img src="css/pic/circle.gif" alt="loading gif" class="loading-gif">
+        <div class="progress-bar">
+            <div class="progress" id="progress"></div>
+        </div>
+        <div class="percentage" id="percentage">0%</div>
+    </div>
+
     <header>
-        <nav aria-label="主選單" role="navigation">
-            <ul id="main-nav">
-                <li><a href="index.html" class="about-link">Resume</a></li>
-                <li><a href="gd.html" class="active-link">Graphic Design</a></li>
-                <li><a href="uiux.html" class="about-link">UI/UX Design</a></li>
-                <li><a href="video.html" class="about-link">Video Design</a></li>
+        <div class="brand">GEORGE XIE</div>
+        <button id="menu-toggle" aria-label="Toggle Menu">
+            <span></span><span></span><span></span>
+        </button>
+        <nav id="main-nav">
+            <ul>
+                <li><a href="index.html">Resume</a></li>
+                <li><a href="gd.html" class="active">Graphic Design</a></li>
+                <li><a href="uiux.html">UI/UX Design</a></li>
+                <li><a href="video.html">Video Design</a></li>
             </ul>
-            <button id="menu-button" aria-label="開啟選單">
-                <div class="bar bar1"></div>
-                <div class="bar bar2"></div>
-                <div class="bar bar3"></div>
-            </button>
         </nav>
     </header>
-    <section class="banner">
-        <div class="banner-text">
-            <h1>平面設計<br>GRAPHIC DESIGN</br></h1>
-            <p>熟練 PS、AI 等其他設計工具，擅長行銷宣傳、版面設計和印刷品設計，
-            將複雜的概念轉化為引人注目的視覺效果。</p>
-        </div>
-        <div class="banner-image">
-            <img src="css/pic/graphic.svg" alt="Banner Image">
-        </div>
-    </section>
-  <div class="gallery">
-  <div class="item"><img src="css/pic/智能客服-08.png" alt=""></div>
-  <div class="item"><img src="css/pic/智能客服-09.png" alt=""></div>
-  <div class="item"><img src="css/pic/智能客服-10.png" alt=""></div>
-  <div class="item"><img src="css/pic/智能客服-11.png" alt=""></div>
-  <div class="item"><img src="css/pic/資產 3.png" alt=""></div>
-  <div class="item"><img src="css/pic/資產 4.png" alt=""></div>
-  <div class="item"><img src="css/pic/資產 5.png" alt=""></div>
-  <div class="item"><img src="css/pic/資產 6.png" alt=""></div>
-  <div class="item"><img src="css/pic/資產 7.png" alt=""></div>
-  <div class="item"><img src="css/pic/資產 8.png" alt=""></div>
-  <div class="item"><img src="css/pic/資產 9.png" alt=""></div>
-  <div class="item"><img src="css/pic/主視覺-06.png" alt=""></div>
-  <div class="item"><img src="css/pic/主視覺-12.png" alt=""></div>
-  <div class="item"><img src="css/pic/主視覺-13.png" alt=""></div>
-  <div class="item"><img src="css/pic/主視覺-17.png" alt=""></div>
-  <div class="item"><img src="css/pic/104圖片-02.png" alt=""></div>
-  <div class="item"><img src="css/pic/104圖片-11.png" alt=""></div>
-  <div class="item"><img src="css/pic/104圖片_工作區域 1-01.png" alt=""></div>
-  <div class="item"><img src="css/pic/中秋節_line頭像.png" alt=""></div>
-  <div class="item"><img src="css/pic/中秋節貼文(中).png" alt=""></div>
-  <div class="item"><img src="css/pic/春節_line頭像-01.png" alt=""></div>
-  <div class="item"><img src="css/pic/春節_貼文.png" alt=""></div>
-  <div class="item"><img src="css/pic/端午節頭貼-04.png" alt=""></div>
-  <div class="item"><img src="css/pic/端午貼文(中)-02.png" alt=""></div>
-  <div class="item"><img src="css/pic/IMG-3490.jpg" alt=""></div>
-  <div class="item"><img src="css/pic/IMG-3492.jpg" alt=""></div>
-  <div class="item"><img src="css/pic/IMG-3500.jpg" alt=""></div>
-  <div class="item"><img src="css/pic/IMG-3521.jpg" alt=""></div>
-  <div class="item"><img src="css/pic/工作區域 1.png" alt=""></div>
-  <div class="item"><img src="css/pic/工作區域 2.png" alt=""></div>
-  <div class="item"><img src="css/pic/工作區域 3.png" alt=""></div>
-  <div class="item"><img src="css/pic/工作區域 4.png" alt=""></div>
-  <div class="item"><img src="css/pic/6085252-02.png" alt=""></div>
-  <div class="item"><img src="css/pic/howhow課綱-1-16.png" alt=""></div>
-  <div class="item"><img src="css/pic/howhow課綱-15.png" alt=""></div>
-  <div class="item"><img src="css/pic/howhow課綱_工作區域 1 複本 2.png" alt=""></div>
-  <div class="item"><img src="css/pic/howhow課綱_工作區域 1 複本 3.png" alt=""></div>
-  <div class="item"><img src="css/pic/howhow課綱_工作區域 1 複本 4.png" alt=""></div>
-  <div class="item"><img src="css/pic/HOWHOW_工作區域 1 複本.png" alt=""></div>
-  <div class="item"><img src="css/pic/Python與TEJ API：量化金融數據分析全攻略(課前提問)_工作區域 1 複本 2.png" alt=""></div>
-  <div class="item"><img src="css/pic/Python與TEJ API：量化金融數據分析全攻略.png" alt=""></div>
-  <div class="item"><img src="css/pic/accupass實體_banner.png" alt=""></div>
-  <div class="item"><img src="css/pic/EDM-02.png" alt=""></div>
-  <div class="item"><img src="css/pic/EDM-04.png" alt=""></div>
-  <div class="item"><img src="css/pic/EDM-06.png" alt=""></div>
-  <div class="item"><img src="css/pic/icon_工作區域 1 複本 2.png" alt=""></div>
-  <div class="item"><img src="css/pic/icon_工作區域 1 複本 3.png" alt=""></div>
-  <div class="item"><img src="css/pic/icon_工作區域 1 複本 4.png" alt=""></div>
-  <div class="item"><img src="css/pic/icon_工作區域 1 複本 5.png" alt=""></div>
-  <div class="item"><img src="css/pic/icon_工作區域 1 複本 6.png" alt=""></div>
-  <div class="item"><img src="css/pic/icon_工作區域 1 複本 7.png" alt=""></div>
-  <div class="item"><img src="css/pic/icon_工作區域 1 複本.png" alt=""></div>
-  <div class="item"><img src="css/pic/icon_工作區域 1.png" alt=""></div>
-  <div class="item"><img src="css/pic/ai.png" alt=""></div>
-  <div class="item"><img src="css/pic/月暴徒_工作區域 1.png" alt=""></div>
-  <div class="item"><img src="css/pic/官網會員圖_工作區域 1 複本 2.png" alt=""></div>
-  <div class="item"><img src="css/pic/官網會員圖_工作區域 1.png" alt=""></div>
-  <div class="item"><img src="css/pic/官網會員圖_工作區域 1 複本.png" alt=""></div>
-  <div class="item"><img src="css/pic/google classroom_工作區域 1.png" alt=""></div>
-  <div class="item"><img src="css/pic/模組化建構您的策略.png" alt=""></div>
- <div class="item"> <img src="css/pic/龐大且高品質的資料庫.png" alt=""></div>
-  <div class="item"><img src="css/pic/強大、嚴謹的回測分析套件.png" alt=""></div>
-</div>
-    <button id="back-to-top" class="back-to-top">&#8679;</button>
 
-<div class="loading-screen" id="loading-screen">
-    <img src="css/pic/circle.gif" alt="loading gif" class="loading-gif">
-    <div class="progress-bar">
-        <div class="progress" id="progress"></div>
-    </div>
-    <div class="percentage" id="percentage">0%</div>
-</div>
-    <script src="js/gd.js" defer></script>
+    <main>
+        <section class="hero">
+            <div class="hero-inner">
+                <div class="hero-text">
+                    <span class="hero-title-sub reveal-wrap"><span class="hero-reveal-text">Portfolio</span></span>
+                    <h1 class="hero-title-main reveal-wrap"><span class="hero-reveal-text">GRAPHIC<br>DESIGN</span></h1>
+                    <p class="reveal-wrap" style="color: var(--c-text-secondary); margin-top: 20px;">
+                        <span class="hero-reveal-text">將複雜的概念轉化為引人注目的視覺效果。</span>
+                    </p>
+                </div>
+                <div class="hero-img-wrap hero-img-mask">
+                    <img src="css/pic/graphic.svg" alt="Graphic Design Banner" style="object-fit: contain; padding: 20px; background: rgba(255,255,255,0.02);">
+                </div>
+            </div>
+            <div class="scroll-hint" style="display: none;">SCROLL</div> 
+        </section>
+
+        <section>
+            <div class="section-header">
+                <h2 class="section-title scram-target">Gallery</h2>
+            </div>
+            <div class="container content-wrap">
+                <div class="gallery-masonry">
+                    
+                    <div class="item fade-up"><img src="css/pic/智能客服-08.png" alt="Work"></div>
+                    <div class="item fade-up"><img src="css/pic/智能客服-09.png" alt="Work"></div>
+                    <div class="item fade-up"><img src="css/pic/智能客服-10.png" alt="Work"></div>
+                    <div class="item fade-up"><img src="css/pic/智能客服-11.png" alt="Work"></div>
+                    <div class="item fade-up"><img src="css/pic/資產 3.png" alt="Work"></div>
+                    <div class="item fade-up"><img src="css/pic/資產 4.png" alt="Work"></div>
+                    <div class="item fade-up"><img src="css/pic/資產 5.png" alt="Work"></div>
+                    <div class="item fade-up"><img src="css/pic/資產 6.png" alt="Work"></div>
+                    <div class="item fade-up"><img src="css/pic/資產 7.png" alt="Work"></div>
+                    <div class="item fade-up"><img src="css/pic/資產 8.png" alt="Work"></div>
+                    <div class="item fade-up"><img src="css/pic/資產 9.png" alt="Work"></div>
+                    <div class="item fade-up"><img src="css/pic/主視覺-06.png" alt="Work"></div>
+                    <div class="item fade-up"><img src="css/pic/主視覺-12.png" alt="Work"></div>
+                    <div class="item fade-up"><img src="css/pic/主視覺-13.png" alt="Work"></div>
+                    <div class="item fade-up"><img src="css/pic/主視覺-17.png" alt="Work"></div>
+                    <div class="item fade-up"><img src="css/pic/104圖片-02.png" alt="Work"></div>
+                    <div class="item fade-up"><img src="css/pic/104圖片-11.png" alt="Work"></div>
+                    <div class="item fade-up"><img src="css/pic/104圖片_工作區域 1-01.png" alt="Work"></div>
+                    <div class="item fade-up"><img src="css/pic/中秋節_line頭像.png" alt="Work"></div>
+                    <div class="item fade-up"><img src="css/pic/中秋節貼文(中).png" alt="Work"></div>
+                    <div class="item fade-up"><img src="css/pic/春節_line頭像-01.png" alt="Work"></div>
+                    <div class="item fade-up"><img src="css/pic/春節_貼文.png" alt="Work"></div>
+                    <div class="item fade-up"><img src="css/pic/端午節頭貼-04.png" alt="Work"></div>
+                    <div class="item fade-up"><img src="css/pic/端午貼文(中)-02.png" alt="Work"></div>
+                    <div class="item fade-up"><img src="css/pic/IMG-3490.jpg" alt="Work"></div>
+                    <div class="item fade-up"><img src="css/pic/IMG-3492.jpg" alt="Work"></div>
+                    <div class="item fade-up"><img src="css/pic/IMG-3500.jpg" alt="Work"></div>
+                    <div class="item fade-up"><img src="css/pic/IMG-3521.jpg" alt="Work"></div>
+                    <div class="item fade-up"><img src="css/pic/工作區域 1.png" alt="Work"></div>
+                    <div class="item fade-up"><img src="css/pic/工作區域 2.png" alt="Work"></div>
+                    <div class="item fade-up"><img src="css/pic/工作區域 3.png" alt="Work"></div>
+                    <div class="item fade-up"><img src="css/pic/工作區域 4.png" alt="Work"></div>
+                    <div class="item fade-up"><img src="css/pic/6085252-02.png" alt="Work"></div>
+                    <div class="item fade-up"><img src="css/pic/howhow課綱-1-16.png" alt="Work"></div>
+                    <div class="item fade-up"><img src="css/pic/howhow課綱-15.png" alt="Work"></div>
+                    <div class="item fade-up"><img src="css/pic/howhow課綱_工作區域 1 複本 2.png" alt="Work"></div>
+                    <div class="item fade-up"><img src="css/pic/howhow課綱_工作區域 1 複本 3.png" alt="Work"></div>
+                    <div class="item fade-up"><img src="css/pic/howhow課綱_工作區域 1 複本 4.png" alt="Work"></div>
+                    <div class="item fade-up"><img src="css/pic/HOWHOW_工作區域 1 複本.png" alt="Work"></div>
+                    <div class="item fade-up"><img src="css/pic/Python與TEJ API：量化金融數據分析全攻略(課前提問)_工作區域 1 複本 2.png" alt="Work"></div>
+                    <div class="item fade-up"><img src="css/pic/Python與TEJ API：量化金融數據分析全攻略.png" alt="Work"></div>
+                    <div class="item fade-up"><img src="css/pic/accupass實體_banner.png" alt="Work"></div>
+                    <div class="item fade-up"><img src="css/pic/EDM-02.png" alt="Work"></div>
+                    <div class="item fade-up"><img src="css/pic/EDM-04.png" alt="Work"></div>
+                    <div class="item fade-up"><img src="css/pic/EDM-06.png" alt="Work"></div>
+                    <div class="item fade-up"><img src="css/pic/icon_工作區域 1 複本 2.png" alt="Work"></div>
+                    <div class="item fade-up"><img src="css/pic/icon_工作區域 1 複本 3.png" alt="Work"></div>
+                    <div class="item fade-up"><img src="css/pic/icon_工作區域 1 複本 4.png" alt="Work"></div>
+                    <div class="item fade-up"><img src="css/pic/icon_工作區域 1 複本 5.png" alt="Work"></div>
+                    <div class="item fade-up"><img src="css/pic/icon_工作區域 1 複本 6.png" alt="Work"></div>
+                    <div class="item fade-up"><img src="css/pic/icon_工作區域 1 複本 7.png" alt="Work"></div>
+                    <div class="item fade-up"><img src="css/pic/icon_工作區域 1 複本.png" alt="Work"></div>
+                    <div class="item fade-up"><img src="css/pic/icon_工作區域 1.png" alt="Work"></div>
+                    <div class="item fade-up"><img src="css/pic/ai.png" alt="Work"></div>
+                    <div class="item fade-up"><img src="css/pic/月暴徒_工作區域 1.png" alt="Work"></div>
+                    <div class="item fade-up"><img src="css/pic/官網會員圖_工作區域 1 複本 2.png" alt="Work"></div>
+                    <div class="item fade-up"><img src="css/pic/官網會員圖_工作區域 1.png" alt="Work"></div>
+                    <div class="item fade-up"><img src="css/pic/官網會員圖_工作區域 1 複本.png" alt="Work"></div>
+                    <div class="item fade-up"><img src="css/pic/google classroom_工作區域 1.png" alt="Work"></div>
+                    <div class="item fade-up"><img src="css/pic/模組化建構您的策略.png" alt="Work"></div>
+                    <div class="item fade-up"><img src="css/pic/龐大且高品質的資料庫.png" alt="Work"></div>
+                    <div class="item fade-up"><img src="css/pic/強大、嚴謹的回測分析套件.png" alt="Work"></div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-links">
+            <div class="footer-item">
+                <a href="mailto:george102312@gmail.com">
+                    <img src="css/pic/gmail-logo.png" alt="Gmail">
+                    <p>Gmail</p>
+                </a>
+            </div>
+            <div class="footer-item">
+                <a href="https://www.behance.net/bc4d162c" target="_blank">
+                    <img src="css/pic/behance.png" alt="Behance">
+                    <p>Behance</p>
+                </a>
+            </div>
+             <div class="footer-item">
+                <a href="https://pda.104.com.tw/profile/share/bHw0xjl1wqi8jKoL2R9J3qNsAeIbRj9Y" target="_blank">
+                    <img src="css/pic/104_logo.png" alt="104">
+                    <p>104</p>
+                </a>
+            </div>
+        </div>
+        <p class="copyright">© 2025 謝宙錡 GeorgeXIE. All Rights Reserved.</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/lenis@1.0.45/dist/lenis.min.js"></script>
+    
+    <script src="js/gd.js"></script>
 </body>
 </html>

@@ -2,95 +2,169 @@
 <html lang="zh-TW">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UI/UX DESIGN</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>UI/UX Design | 謝宙錡 GeorgeXIE</title>
+    <meta name="description" content="UI/UX Design Portfolio - George XIE">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;700&family=Noto+Serif+TC:wght@300;500;700&family=Raleway:wght@300;500&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="css/uiux.css">
     <link rel="icon" type="image/png" href="css/pic/ICON-14.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-
 </head>
+
 <body>
+    <div class="noise-overlay"></div>
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <div id="loading-screen">
+        <img src="css/pic/circle.gif" alt="loading gif" class="loading-gif">
+        <div class="progress-bar">
+            <div class="progress" id="progress"></div>
+        </div>
+        <div class="percentage" id="percentage">0%</div>
+    </div>
+
     <header>
-        <nav aria-label="主選單" role="navigation">
-            <ul id="main-nav">
-                <li><a href="index.html" class="about-link">Resume</a></li>
-                <li><a href="gd.html" class="about-link">Graphic Design</a></li>
-                <li><a href="uiux.html" class="active-link">UI/UX Design</a></li>
-                <li><a href="video.html" class="about-link">Video Design</a></li>
+        <div class="brand">GEORGE XIE</div>
+        <button id="menu-toggle" aria-label="Toggle Menu">
+            <span></span><span></span><span></span>
+        </button>
+        <nav id="main-nav">
+            <ul>
+                <li><a href="index.html">Resume</a></li>
+                <li><a href="gd.html">Graphic Design</a></li>
+                <li><a href="uiux.html" class="active">UI/UX Design</a></li>
+                <li><a href="video.html">Video Design</a></li>
             </ul>
-            <button id="menu-button" aria-label="開啟選單">
-                <div class="bar bar1"></div>
-                <div class="bar bar2"></div>
-                <div class="bar bar3"></div>
-            </button>
         </nav>
     </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-inner">
+                <div class="hero-text">
+                    <span class="hero-title-sub reveal-wrap"><span class="hero-reveal-text">Portfolio</span></span>
+                    <h1 class="hero-title-main reveal-wrap"><span class="hero-reveal-text">UI/UX<br>DESIGN</span></h1>
+                    <p class="reveal-wrap" style="color: var(--c-text-secondary); margin-top: 20px;">
+                        <span class="hero-reveal-text">創造直觀且吸引人的使用者介面，提升用戶體驗。</span>
+                    </p>
+                </div>
+                <div class="hero-img-wrap hero-img-mask">
+                    <img src="css/pic/uiux.svg" alt="UI/UX Banner" style="object-fit: contain; padding: 20px; background: rgba(255,255,255,0.02);">
+                </div>
+            </div>
+            <div class="scroll-hint" style="display: none;">SCROLL</div> 
+        </section>
+
+        <section>
+            <div class="section-header">
+                <h2 class="section-title scram-target">Selected Work</h2>
+            </div>
+            <div class="container content-wrap">
+                <div class="portfolio-grid-dark">
+                    
+                    <a href="https://www.behance.net/gallery/229866689/UIUX-DesignMobil-APPSAVE-MONEY" target="_blank" class="portfolio-card fade-up">
+                        <div class="p-img-box">
+                            <img src="css/pic/save money.png" alt="SAVE MONEY">
+                        </div>
+                        <div class="p-content">
+                            <div class="p-meta">Mobil APP</div>
+                            <h3>SAVE MONEY</h3>
+                            <span class="p-link">View Project ➜</span>
+                        </div>
+                    </a>
+
+                    <a href="https://www.behance.net/gallery/230189813/UIUX-Web-DesignTEJ-AI-Customer-Service" target="_blank" class="portfolio-card fade-up">
+                        <div class="p-img-box">
+                            <img src="css/pic/tej ai.png" alt="TEJ AI">
+                        </div>
+                        <div class="p-content">
+                            <div class="p-meta">Web Design</div>
+                            <h3>TEJ AI Customer Service</h3>
+                            <span class="p-link">View Project ➜</span>
+                        </div>
+                    </a>
+
+                    <a href="https://www.behance.net/gallery/229309839/UIUX-CSoul" target="_blank" class="portfolio-card fade-up">
+                        <div class="p-img-box">
+                            <img src="css/pic/c.soul.png" alt="C.Soul">
+                        </div>
+                        <div class="p-content">
+                            <div class="p-meta">Platform Design</div>
+                            <h3>C.Soul Virtual Fitting</h3>
+                            <span class="p-link">View Project ➜</span>
+                        </div>
+                    </a>
+
+                    <a href="https://www.behance.net/gallery/229519471/Website-Optimization-TEJ-Official-Website" target="_blank" class="portfolio-card fade-up">
+                        <div class="p-img-box">
+                            <img src="css/pic/tej.png" alt="TEJ Website">
+                        </div>
+                        <div class="p-content">
+                            <div class="p-meta">Optimization</div>
+                            <h3>TEJ Official Website</h3>
+                            <span class="p-link">View Project ➜</span>
+                        </div>
+                    </a>
+
+                    <a href="https://www.behance.net/gallery/229697141/UIUX-Web-Optimization-TQuant-Lab" target="_blank" class="portfolio-card fade-up">
+                        <div class="p-img-box">
+                            <img src="css/pic/tq lab.png" alt="TQuant Lab">
+                        </div>
+                        <div class="p-content">
+                            <div class="p-meta">Web Optimization</div>
+                            <h3>TQuant Lab</h3>
+                            <span class="p-link">View Project ➜</span>
+                        </div>
+                    </a>
+
+                    <a href="https://www.behance.net/gallery/229966733/Product-ResearchUX-ResearchHealing-RPG" target="_blank" class="portfolio-card fade-up">
+                        <div class="p-img-box">
+                            <img src="css/pic/rpg.png" alt="Healing RPG">
+                        </div>
+                        <div class="p-content">
+                            <div class="p-meta">UX Research</div>
+                            <h3>Healing RPG</h3>
+                            <span class="p-link">View Project ➜</span>
+                        </div>
+                    </a>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-links">
+            <div class="footer-item">
+                <a href="mailto:george102312@gmail.com">
+                    <img src="css/pic/gmail-logo.png" alt="Gmail">
+                    <p>Gmail</p>
+                </a>
+            </div>
+            <div class="footer-item">
+                <a href="https://www.behance.net/bc4d162c" target="_blank">
+                    <img src="css/pic/behance.png" alt="Behance">
+                    <p>Behance</p>
+                </a>
+            </div>
+             <div class="footer-item">
+                <a href="https://pda.104.com.tw/profile/share/bHw0xjl1wqi8jKoL2R9J3qNsAeIbRj9Y" target="_blank">
+                    <img src="css/pic/104_logo.png" alt="104">
+                    <p>104</p>
+                </a>
+            </div>
+        </div>
+        <p class="copyright">© 2025 謝宙錡 GeorgeXIE. All Rights Reserved.</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/lenis@1.0.45/dist/lenis.min.js"></script>
     
-    <section class="banner">
-        <div class="banner-text">
-            <h1>使用者介面 / 體驗<br>UI / UX DESIGN</br></h1>
-            <p>專注於創造直觀且吸引人的使用者介面，並深入了解目標使用者的需求和行為，設計出提升用戶體驗的界面。</p>
-        </div>
-        <div class="banner-image">
-            <img src="css/pic/uiux.svg" alt="Banner Image">
-        </div>
-    </section>
-    <section class="portfolio">
-  <div class="portfolio-grid">
-    <div class="portfolio-item">
-        <div class="image-wrapper">
-      <img src="css/pic/save money.png" alt="作品1">
-      </div>
-      <h2>UI/UX Design︱Mobil APP︱SAVE MONEY</h2>
-      <a href="https://www.behance.net/gallery/229866689/UIUX-DesignMobil-APPSAVE-MONEY" target="_blank"><span>了解更多 ➜</span></a>
-    </div>
-    <div class="portfolio-item">
-         <div class="image-wrapper">
-      <img src="css/pic/tej ai.png" alt="作品2">
-      </div>
-      <h2>UI/UX ︱Web Design︱TEJ AI Customer Service</h2>
-      <a href="https://www.behance.net/gallery/230189813/UIUX-Web-DesignTEJ-AI-Customer-Service" target="_blank"><span>了解更多 ➜</span></a>
-    </div>
-    <div class="portfolio-item">
-         <div class="image-wrapper">
-      <img src="css/pic/c.soul.png" alt="作品3">
-      </div>
-      <h2>UI/UX ｜C.Soul｜打造即時模擬試穿的虛擬穿搭平台</h2>
-      <a href="https://www.behance.net/gallery/229309839/UIUX-CSoul" target="_blank"><span>了解更多 ➜</span></a>
-    </div>
-    <div class="portfolio-item">
-        <div class="image-wrapper">
-      <img src="css/pic/tej.png" alt="作品4">
-      </div>
-      <h2>Website Optimization ｜TEJ Official Website</h2>
-      <a href="https://www.behance.net/gallery/229519471/Website-Optimization-TEJ-Official-Website" target="_blank"><span>了解更多 ➜</span></a>
-    </div>
-    <div class="portfolio-item">
-        <div class="image-wrapper">
-      <img src="css/pic/tq lab.png" alt="作品5">
-      </div>
-      <h2>UI/UX | Web Optimization | TQuant Lab</h2>
-      <a href="https://www.behance.net/gallery/229697141/UIUX-Web-Optimization-TQuant-Lab" target="_blank"><span>了解更多 ➜</span></a>
-    </div>
-    <div class="portfolio-item">
-        <div class="image-wrapper">
-      <img src="css/pic/rpg.png" alt="作品6">
-      </div>
-      <h2>Product Research︱UX Research︱Healing RPG</h2>
-      <a href="https://www.behance.net/gallery/229966733/Product-ResearchUX-ResearchHealing-RPG" target="_blank"><span>了解更多 ➜</span></a>
-    </div>
-  </div>
-</section>
-<div class="loading-screen" id="loading-screen">
-    <img src="css/pic/circle.gif" alt="loading gif" class="loading-gif">
-    <div class="progress-bar">
-        <div class="progress" id="progress"></div>
-    </div>
-    <div class="percentage" id="percentage">0%</div>
-</div>
-    <button id="back-to-top" class="back-to-top">&#8679;</button>
     <script src="js/uiux.js"></script>
 </body>
 </html>

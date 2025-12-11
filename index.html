@@ -2,233 +2,279 @@
 <html lang="zh-TW">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>謝宙錡 GeorgeXIE | UI/UX 設計師作品集與履歷</title>
-     <meta name="description" content="謝宙錡的個人履歷與作品集，專長於 UI/UX 設計、前端開發與數位行銷，具備實務經驗與專業證照。">
-    <meta name="keywords" content="UI/UX, 前端開發, 數位行銷, 簡報設計, SEO優化, 謝宙錡, GeorgeXIE, 履歷, 作品集">
-    <meta name="author" content="謝宙錡 GeorgeXIE">
- <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "謝宙錡 GeorgeXIE",
-    "url": "https://georgexie-uiux.github.io/Portfolio/",
-    "image": "https://georgexie-uiux.github.io/Portfolio/css/pic/introduce.jpg",
-    "jobTitle": "UI/UX Designer",
-    "sameAs": [
-      "https://www.behance.net/bc4d162c",
-      "https://pda.104.com.tw/profile/share/bHw0xjl1wqi8jKoL2R9J3qNsAeIbRj9Y"
-    ]
-  }
-  </script>
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="icon" type="image/png" href="css/pic/ICON-14.png">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>謝宙錡 GeorgeXIE | UI/UX Designer</title>
+    <meta name="description" content="謝宙錡的個人履歷與作品集">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;700&family=Noto+Serif+TC:wght@300;500;700&family=Raleway:wght@300;500&display=swap" rel="stylesheet">
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-6HEG4ZYEZ7"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-6HEG4ZYEZ7');
-</script>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" type="image/png" href="css/pic/ICON-14.png">
 </head>
 
 <body>
+    <div class="noise-overlay"></div>
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
     <div class="loading-page" id="loading-page">
-       <div style="text-align:center">
-        <svg id="svg" xmlns="http://www.w3.org/2000/svg" viewBox="-50 -50 300 300">
-            <path d="M203.76056,84.4366l-3.89083,3.88773q-47.65649-20.99841-89.7679,13.55595,42.10831,34.5528,89.7679,13.55285l3.89083,3.89083-84.4366,84.4366-3.89083-3.89083q20.55232-47.88417-13.55285-89.7679-34.44592,41.9968-13.44443,89.65638l-3.99925,4.00235L0,119.32086l3.99925-3.99615q47.43809,21.2168,89.65948-13.44443Q51.32737,67.55051,3.99925,88.43585L0,84.43969,84.43969,0l3.99616,3.99925Q67.43744,51.66038,101.88028,93.65873q34.66432-42.21984,13.55595-89.771L119.32086,0Z"/>
-        </svg>
-        </div>
-        <div class="name-container">
+        <div style="text-align:center">
+            <svg id="svg" xmlns="http://www.w3.org/2000/svg" viewBox="-50 -50 300 300">
+                <path d="M203.76056,84.4366l-3.89083,3.88773q-47.65649-20.99841-89.7679,13.55595,42.10831,34.5528,89.7679,13.55285l3.89083,3.89083-84.4366,84.4366-3.89083-3.89083q20.55232-47.88417-13.55285-89.7679-34.44592,41.9968-13.44443,89.65638l-3.99925,4.00235L0,119.32086l3.99925-3.99615q47.43809,21.2168,89.65948-13.44443Q51.32737,67.55051,3.99925,88.43585L0,84.43969,84.43969,0l3.99616,3.99925Q67.43744,51.66038,101.88028,93.65873q34.66432-42.21984,13.55595-89.771L119.32086,0Z"/>
+            </svg>
             <div class="logo-name">XIE ZHOU QI</div>
         </div>
     </div>
+
     <header>
-        <nav aria-label="主選單" role="navigation">
-            <ul id="main-nav">
-                <li><a href="index.html" class="active-link">Resume</a></li>
-                <li><a href="gd.html" class="about-link">Graphic Design</a></li>
-                <li><a href="uiux.html" class="about-link">UI/UX Design</a></li>
-                <li><a href="video.html" class="about-link">Video Design</a></li>
+        <div class="brand">GEORGE XIE</div>
+        
+        <button id="menu-toggle" aria-label="Toggle Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav id="main-nav">
+            <ul>
+                <li><a href="index.html" class="active">Resume</a></li>
+                <li><a href="gd.html">Graphic Design</a></li>
+                <li><a href="uiux.html">UI/UX Design</a></li>
+                <li><a href="video.html">Video Design</a></li>
             </ul>
-            <button id="menu-button" aria-label="開啟選單">
-                <div class="bar bar1"></div>
-                <div class="bar bar2"></div>
-                <div class="bar bar3"></div>
-            </button>
         </nav>
     </header>
-   <section class="main-section">
-    <div class="text-area">
-      <p>嗨 👋 我是謝宙錡</p>
-      <h1>UI/UX<br>Designer</h1>
-      <div class="scroll-down">向下滾動 ↓</div>
-    </div>
-    <div class="image-area">
-      <div class="left-image">
-        <img src="css/pic/introduce.jpg" alt="圖片">
-      </div>
-      <div class="right-text">
-        <h2>About Me</h2>
-        <p>我是一位熱愛學習、善於溝通並具備創意思維的產品設計人才，擅長從使用者角度出發，結合邏輯思考與視覺策略，打造符合需求的產品體驗。空閒之餘，我會持續觀摩與實作各類 UI/UX 設計，研究不同裝置與主題下的風格與互動模式，並自學前端技術，強化設計落地能力。我曾親自從零開發一款「存錢 App」，從使用者調查、資訊架構、介面設計到前端實作皆由我一手完成。在 IFERMI 簡報設計公司實習期間，我參與了 Google 簡報設計專案，學習如何將複雜資訊清楚表達並優化視覺提升觀眾體驗。隨後於台灣經濟新報擔任 UI/UX 設計實習生，參與企業官網、回測平台與智能客服系統的設計與前端開發，實際參與使用者研究、服務流程企劃、原型設計與跨部門協作，從中理解如何在商業目標與使用者體驗間取得平衡，並優化整體產品體驗，此外，我也參與政府推動的「T 大使計畫」，在這計畫內專注於公司的 SEO 優化，大幅修改網站後台並利用 GA 串接 lookstudio製作儀錶板，查看數據並改善，成功提升曝光度50%，並募得140萬海外資金，並且在 T大使的數位之星比賽中，智能客服網站獲得創意延伸組【特優獎】。</p>
-      </div>
-    </div>
-  </section>
-  <section class="card-section">
-    <h2 class="section-title">Work Experience</h2>
-     <div class="certificate-grid">
-    <div class="card">
-    <div class="card-header">
-      <h3>IFERMI 扶風整合設計公司</h3>
-      <span class="card-time">2023.04-2024.04</span>
-    </div>
-    <hr>
-    <ul class="card-list">
-    <li>簡報美化設計</li>
-    <li>google slide & ppt 製作技巧</li>
-    <li>將數據轉化為易於理解的圖表</li>
-    <li>與各方合作共同完成專案</li>
-    <li>主要負責 Google 公司簡報並到現場協助執行</li>
-   </ul>
-  </div>
 
-  <div class="card">
-    <div class="card-header">
-      <h3>台灣經濟新報文化事業股份有限公司</h3>
-      <span class="card-time">2023.12-2024.10</span>
-    </div>
-    <hr>
-    <ul class="card-list">
-    <li>與各部門及廠商溝通滿足各方需求</li>
-    <li>智能客服 UI/UX及前端設計</li>
-    <li>TQuant Lab 及官網優化</li>
-    <li>宣傳影片剪輯</li>
-    <li>行銷平面設計</li>
-    <li>電子報設計</li>
-    </ul>
-  </div>
+    <main>
+        <section class="hero">
+            <div class="hero-inner">
+                <div class="hero-text">
+                    <span class="hero-title-sub reveal-wrap"><span class="hero-reveal-text">UI/UX Designer</span></span>
+                    <h1 class="hero-title-main reveal-wrap"><span class="hero-reveal-text">謝宙錡<br>George XIE</span></h1>
+                    <p class="reveal-wrap" style="color: var(--c-text-secondary); margin-top: 20px;">
+                        <span class="hero-reveal-text">以邏輯思考，構築感性體驗。</span>
+                    </p>
+                </div>
+                <div class="hero-img-wrap hero-img-mask">
+                    <img src="css/pic/introduce.jpg" alt="Profile" data-speed="0.5">
+                </div>
+            </div>
+            <div class="scroll-hint">SCROLL</div>
+        </section>
 
-  <div class="card">
-    <div class="card-header">
-      <h3>數位青年 T 大使推動計畫</h3>
-      <span class="card-time">2024.06 - 2024.10</span>
-    </div>
-    <hr>
-    <ul class="card-list">
-      <li>SEO 優化與網站曝光提升 50%</li>
-      <li>成功募得 140 萬海外基金</li>
-      <li>國際證照取得擁有更多專業技能</li>
-      <li>參與多場講座學習職場技能並拓展視野</li>
-      <li>智能客服網站獲得創意延伸組【特優獎】</li>
-    </ul>
-  </div>
-  </div>
-</section>
+        <section>
+            <div class="section-header">
+                <h2 class="section-title scram-target">About Me</h2>
+            </div>
+            <div class="container content-wrap">
+                <div class="about-grid">
+                    <div class="about-desc fade-up">
+                        <p class="q-title scram-target">個人簡介</p>
+                        <div class="about-text-box">
+                            <p>我畢業於東吳大學資管系，具備良好的邏輯思維、使用者需求洞察能力，以及跨部門溝通協作經驗。大學期間接觸數位內容課程後，我對 UI/UX 設計產生濃厚興趣，並於課餘持續實作設計、研究多種裝置風格，同時自學前端技術，將設計概念轉化為可操作的介面。</p>
+                            <p>在 IFERMI 簡報設計公司實習時，我參與 Google 簡報專案，累積視覺設計與提案經驗；於台灣經濟新報擔任 UI/UX 實習生期間，更實際參與使用者研究、流程設計與前端開發，協助官網、回測平台與智能客服的產品優化。此外，我也參與政府「T 大使計畫」，負責 SEO 與行銷策略，成功協助企業提升海外曝光，爭取 140 萬元國際資金。</p>
+                        </div>
+                    </div>
+                    <div class="about-stats quadrant-wrap fade-up">
+                        <p class="q-title scram-target">核心價值</p>
+                        <div class="quadrant-grid">
+                            <div class="q-item">
+                                <span class="q-num">01.</span><span class="q-text">使用者<br>中心思考</span>
+                            </div>
+                            <div class="q-item">
+                                <span class="q-num">02.</span><span class="q-text">視覺<br>廣告設計</span>
+                            </div>
+                            <div class="q-item">
+                                <span class="q-num">03.</span><span class="q-text">前端<br>程式設計</span>
+                            </div>
+                            <div class="q-item">
+                                <span class="q-num">04.</span><span class="q-text">SEO<br>行銷策略</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-<section class="info-section">
-  <div class="edu-column">
-    <h2 class="section-title">Educational Attainment</h2>
-    <ul class="edu-list">
-      <li>
-        <h3>東吳大學 資訊管理學系</h3>
-        <span class="edu-time">2020 – 2023</span>
-      </li>
-    </ul>
-    <img src="css/pic/scu.jpg" alt="教育照片" class="edu-image">
-  </div>
+        <section>
+            <div class="section-header">
+                <h2 class="section-title scram-target">Experience</h2>
+            </div>
+            <div class="container content-wrap">
+                <div class="work-item fade-up">
+                    <div class="work-date">2023.04 - 2024.04</div>
+                    <div class="work-content">
+                        <h3>IFERMI 扶風整合設計公司</h3>
+                        <ul class="work-list">
+                            <li>簡報美化設計</li>
+                            <li>Google Slide & PPT 製作技巧</li>
+                            <li>將數據轉化為易於理解的圖表</li>
+                            <li>與各方合作共同完成專案</li>
+                            <li>主要負責 Google 公司簡報並到現場協助執行</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="work-item fade-up">
+                    <div class="work-date">2023.12 - 2024.10</div>
+                    <div class="work-content">
+                        <h3>台灣經濟新報文化事業股份有限公司</h3>
+                        <ul class="work-list">
+                            <li>與各部門及廠商溝通滿足各方需求</li>
+                            <li>智能客服 UI/UX 及前端設計</li>
+                            <li>TQuant Lab 及官網優化</li>
+                            <li>宣傳影片剪輯、行銷平面設計、電子報設計</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="work-item fade-up">
+                    <div class="work-date">2024.06 - 2024.10</div>
+                    <div class="work-content">
+                        <h3>數位青年 T 大使推動計畫</h3>
+                        <ul class="work-list">
+                            <li>SEO 優化與網站曝光提升 50%</li>
+                            <li>成功募得 140 萬海外基金</li>
+                            <li>國際證照取得擁有更多專業技能</li>
+                            <li>智能客服網站獲得創意延伸組【特優獎】</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="work-item fade-up">
+                    <div class="work-date">2025.10 - 至今</div>
+                    <div class="work-content">
+                        <h3>好好證券股份有限公司</h3>
+                        <ul class="work-list">
+                            <li>官網功能優化</li>
+                            <li>後台系統優化</li>
+                            <li>行銷廣告設計</li>
+                            <li>宣傳影片剪輯</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-  <div class="skill-column">
-    <h2 class="section-title">Working Skills</h2>
-    <div class="skill-grid">
-      <div class="icon-item"><img src="css/pic/figma (1).png" alt="Figma"></div>
-      <div class="icon-item"><img src="css/pic/photoshop (1).png"    alt="Photoshop"></div>
-      <div class="icon-item"><img src="css/pic/illustrator (1).png"    alt="Illustrator"></div>
-      <div class="icon-item"><img src="css/pic/after-effects (1).png" alt="effect"></div>
-      <div class="icon-item"><img src="css/pic/premiere-pro (1).png" alt="premiere"></div>
-      <div class="icon-item"><img src="css/pic/html-5.png"  alt="HTML"></div>
-      <div class="icon-item"><img src="css/pic/css-3 (1).png"   alt="CSS"></div>
-      <div class="icon-item"><img src="css/pic/wordpress.png"    alt="wordpress"></div>
-      <div class="icon-item"><img src="css/pic/visual-studio.png" alt="visualstudio"></div>
-      <div class="icon-item"><img src="css/pic/github.png"alt="github"></div>
-      <div class="icon-item"><img src="css/pic/mysql.png" alt="mysql"></div>
-      <div class="icon-item"><img src="css/pic/java.png" alt="java"></div>
-      <div class="icon-item"><img src="css/pic/python.png"alt="Python"></div>
-      <div class="icon-item"><img src="css/pic/unity.png" alt="Unity"></div>
-      <div class="icon-item"><img src="css/pic/google-analytics.png"alt="ga"></div>
+        <section>
+            <div class="container">
+                <div class="es-layout">
+                    <div class="es-column">
+                        <div class="es-header-mini">
+                            <h3 class="es-title-mini scram-target">Education</h3>
+                        </div>
+                        <div class="edu-card fade-up">
+                            <div class="edu-year">2020 - 2023</div>
+                            <div class="edu-info">
+                                <h3>東吳大學<br>資訊管理學系</h3>
+                                <p>具備資訊技術背景，能夠更好地與工程師協作，確保設計落地性。</p>
+                            </div>
+                        </div>
+                        <div class="edu-img-wrap fade-up">
+                            <img src="css/pic/scu.jpg" alt="SCU">
+                        </div>
+                    </div>
 
-    </div>
-  </div>
-</section>
+                    <div class="es-column">
+                        <div class="es-header-mini">
+                            <h3 class="es-title-mini scram-target">Skills</h3>
+                        </div>
+                        <div class="skill-grid-compact">
+                            <div class="skill-card fade-up"><img src="css/pic/figma (1).png" alt="Figma"><div class="skill-name">Figma</div></div>
+                            <div class="skill-card fade-up"><img src="css/pic/photoshop.png" alt="PS"><div class="skill-name">Photoshop</div></div>
+                            <div class="skill-card fade-up"><img src="css/pic/illustrator.png" alt="AI"><div class="skill-name">Illustrator</div></div>
+                            <div class="skill-card fade-up"><img src="css/pic/after-effects (2).png" alt="AE"><div class="skill-name">After Effects</div></div>
+                            <div class="skill-card fade-up"><img src="css/pic/premiere-pro.png" alt="PR"><div class="skill-name">Premiere</div></div>
+                            <div class="skill-card fade-up"><img src="css/pic/html-5.png" alt="HTML"><div class="skill-name">HTML</div></div>
+                            <div class="skill-card fade-up"><img src="css/pic/css.png" alt="CSS"><div class="skill-name">CSS</div></div>
+                            <div class="skill-card fade-up"><img src="css/pic/wordpress.png" alt="WP"><div class="skill-name">Wordpress</div></div>
+                            <div class="skill-card fade-up"><img src="css/pic/vs.png" alt="VS"><div class="skill-name">VS Code</div></div>
+                            <div class="skill-card fade-up"><img src="css/pic/github.png" alt="Github"><div class="skill-name">Github</div></div>
+                            <div class="skill-card fade-up"><img src="css/pic/mysql.png" alt="MySQL"><div class="skill-name">MySQL</div></div>
+                            <div class="skill-card fade-up"><img src="css/pic/java.png" alt="Java"><div class="skill-name">Java</div></div>
+                            <div class="skill-card fade-up"><img src="css/pic/python.png" alt="Python"><div class="skill-name">Python</div></div>
+                            <div class="skill-card fade-up"><img src="css/pic/unity.png" alt="Unity"><div class="skill-name">Unity</div></div>
+                            <div class="skill-card fade-up"><img src="css/pic/google-analytics.png" alt="GA"><div class="skill-name">GA4</div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-<section class="certificate-section">
-  <h2 class="section-title">Professional Certification</h2>
+        <section>
+            <div class="section-header">
+                <h2 class="section-title scram-target">Certification</h2>
+            </div>
+            <div class="container content-wrap">
+                <div class="cert-grid">
+                    <div class="cert-card fade-up">
+                        <div class="cert-header">
+                            <h3>Microsoft Certified: Azure Fundamentals</h3>
+                            <span class="cert-date">2024.09</span>
+                        </div>
+                        <img src="css/pic/az-90.png" alt="AZ-900" class="cert-img">
+                    </div>
+                    <div class="cert-card fade-up">
+                        <div class="cert-header">
+                            <h3>Microsoft Certified: Azure Data Fundamentals</h3>
+                            <span class="cert-date">2024.10</span>
+                        </div>
+                        <img src="css/pic/dp-900.png" alt="DP-900" class="cert-img">
+                    </div>
+                    <div class="cert-card fade-up">
+                        <div class="cert-header">
+                            <h3>TOEIC® Listening and Reading Test</h3>
+                            <span class="cert-date">2024.12</span>
+                        </div>
+                        <img src="css/pic/toeic.png" alt="TOEIC" class="cert-img">
+                    </div>
+                    <div class="cert-card fade-up">
+                        <div class="cert-header">
+                            <h3>證券商業務員</h3>
+                            <span class="cert-date">2025.10</span>
+                        </div>
+                        <img src="css/pic/dp-900.png" alt="DP-900" class="cert-img">
+                    </div>
+                    <div class="cert-card fade-up">
+                        <div class="cert-header">
+                            <h3>金融市場常識與職業道德</h3>
+                            <span class="cert-date">2025.11</span>
+                        </div>
+                        <img src="css/pic/dp-900.png" alt="DP-900" class="cert-img">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
-  <div class="certificate-grid">
-    <div class="certificate-card">
-      <div class="card-header">
-        <h3>Microsoft Certified: Azure Fundamentals</h3>
-        <span class="card-time">2024.09</span>
-      </div>
-      <hr>
-      <img src="css/pic/az-90.png" alt="AZ-900 證照" class="certificate-image">
-    </div>
+    <footer>
+        <div class="footer-links">
+            <div class="footer-item">
+                <a href="mailto:george102312@gmail.com">
+                    <img src="css/pic/gmail-logo.png" alt="Gmail">
+                    <p>Gmail</p>
+                </a>
+            </div>
+            <div class="footer-item">
+                <a href="https://www.behance.net/bc4d162c" target="_blank">
+                    <img src="css/pic/behance.png" alt="Behance">
+                    <p>Behance</p>
+                </a>
+            </div>
+             <div class="footer-item">
+                <a href="https://pda.104.com.tw/profile/share/bHw0xjl1wqi8jKoL2R9J3qNsAeIbRj9Y" target="_blank">
+                    <img src="css/pic/104_logo.png" alt="104">
+                    <p>104</p>
+                </a>
+            </div>
+        </div>
+        <p class="copyright">© 2025 謝宙錡 GeorgeXIE. All Rights Reserved.</p>
+    </footer>
 
-    <div class="certificate-card">
-      <div class="card-header">
-        <h3>Microsoft Certified: Azure Data Fundamentals</h3>
-        <span class="card-time">2024.10</span>
-      </div>
-      <hr>
-      <img src="css/pic/dp-900.png" alt="DP-900 證照" class="certificate-image">
-    </div>
-
-    <div class="certificate-card">
-      <div class="card-header">
-        <h3>TOEIC® Listening and Reading Test </h3>
-        <span class="card-time">2024.12</span>
-      </div>
-      <hr>
-      <img src="css/pic/toeic.png" alt="TOEIC®" class="certificate-image">
-    </div>
-  </div>
-</section>
-
-<footer class="footer">
-   <div class="footer-links">
-    <div class="footer-item">
-        <a href="mailto:george102312@gmail.com" target="_blank">
-            <img src="css/pic/gmail-logo.png" alt="gmail">
-            <p>Gmail</p>
-        </a>
-    </div>
-    <div class="footer-item">
-        <a href="https://www.behance.net/bc4d162c" target="_blank">
-            <img src="css/pic/behance.png" alt="Behance">
-            <p>Behance</p>
-        </a>
-    </div>
-    <div class="footer-item">
-        <a href="https://pda.104.com.tw/profile/share/bHw0xjl1wqi8jKoL2R9J3qNsAeIbRj9Y" target="_blank">
-            <img src="css/pic/104_logo.png" alt="104">
-            <p>104</p>
-        </a>
-    </div>
-    </div>
-     <p class="copyright">© 2025 謝宙錡 GeorgeXIE. All Rights Reserved.</p>
-</footer>
-
-    <button id="back-to-top" class="back-to-top">&#8679;</button>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/lenis@1.0.45/dist/lenis.min.js"></script>
+    
+    <script src="js/loading.js"></script>
     <script src="js/scripts.js"></script>
-    <script src="js/loading.js" defer></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"
-    integrity="sha512-gmwBmiTVER57N3jYS3LinA9eb8aHrJua5iQD7yqYCKa5x6Jjc7VDVaEA0je0Lu0bP9j7tEjV3+1qUm6loO99Kw=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </body>
 </html>

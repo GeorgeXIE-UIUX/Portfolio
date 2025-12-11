@@ -2,199 +2,210 @@
 <html lang="zh-TW">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VIDEO DESIGN</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Video Design | 謝宙錡 GeorgeXIE</title>
+    <meta name="description" content="Video Design Portfolio - George XIE">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;700&family=Noto+Serif+TC:wght@300;500;700&family=Raleway:wght@300;500&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="css/video.css">
     <link rel="icon" type="image/png" href="css/pic/ICON-14.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-
 </head>
+
 <body>
+    <div class="noise-overlay"></div>
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <div id="loading-screen">
+        <img src="css/pic/circle.gif" alt="loading gif" class="loading-gif">
+        <div class="progress-bar">
+            <div class="progress" id="progress"></div>
+        </div>
+        <div class="percentage" id="percentage">0%</div>
+    </div>
+
     <header>
-        <nav aria-label="主選單" role="navigation">
-            <ul id="main-nav">
-                <li><a href="index.html" class="about-link">Resume</a></li>
-                <li><a href="gd.html" class="about-link">Graphic Design</a></li>
-                <li><a href="uiux.html" class="about-link">UI/UX Design</a></li>
-                <li><a href="video.html" class="active-link">Video Design</a></li>
+        <div class="brand">GEORGE XIE</div>
+        <button id="menu-toggle" aria-label="Toggle Menu">
+            <span></span><span></span><span></span>
+        </button>
+        <nav id="main-nav">
+            <ul>
+                <li><a href="index.html">Resume</a></li>
+                <li><a href="gd.html">Graphic Design</a></li>
+                <li><a href="uiux.html">UI/UX Design</a></li>
+                <li><a href="video.html" class="active">Video Design</a></li>
             </ul>
-            <button id="menu-button" aria-label="開啟選單">
-                <div class="bar bar1"></div>
-                <div class="bar bar2"></div>
-                <div class="bar bar3"></div>
-            </button>
         </nav>
     </header>
-    <section class="banner">
-        <div class="banner-text">
-            <h1>影音剪輯<br>VIDEO DESIGN</br></h1>
-            <p>熟練 Premiere Pro 和 After Effect，在有限的資源中，靈活運用特效和過渡來增強影片的視覺效果，創作出具感染力的作品。</p>
-        </div>
-        <div class="banner-image">
-            <img src="css/pic/video.svg" alt="Banner Image">
-        </div>
-    </section>
-    <div class= "title">
-        <h1 data-text="YouTube Videos">YouTube Videos</h1>
-    </div>
-    <section class="container">
-        <div class="browser-window">
-            <div class="title-bar">
-                <div class="buttons">
-                    <div class="close"></div>
-                    <div class="minimize"></div>
-                    <div class="maximize"></div>
+
+    <main>
+        <section class="hero">
+            <div class="hero-inner">
+                <div class="hero-text">
+                    <span class="hero-title-sub reveal-wrap"><span class="hero-reveal-text">Portfolio</span></span>
+                    <h1 class="hero-title-main reveal-wrap"><span class="hero-reveal-text">VIDEO<br>DESIGN</span></h1>
+                    <p class="reveal-wrap" style="color: var(--c-text-secondary); margin-top: 20px;">
+                        <span class="hero-reveal-text">靈活運用特效與過渡，創作出具感染力的視覺作品。</span>
+                    </p>
+                </div>
+                <div class="hero-img-wrap hero-img-mask">
+                    <img src="css/pic/video.svg" alt="Video Design Banner" style="object-fit: contain; padding: 20px; background: rgba(255,255,255,0.02);">
                 </div>
             </div>
-            <div class="content">
-                <div class="slideshow-container">
-                    <div class="mySlides">
-                        <iframe class="video-mockup" src="https://www.youtube.com/embed/mLXH2butSZo"
-                        title="TQuant Lab 線上回測平台介紹" 
-                        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;
-                         picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <div class="scroll-hint" style="display: none;">SCROLL</div> 
+        </section>
+
+        <section>
+            <div class="section-header">
+                <h2 class="section-title scram-target">YouTube Videos</h2>
+            </div>
+            <div class="container content-wrap">
+                <div class="video-grid">
+                    
+                    <div class="browser-window fade-up">
+                        <div class="title-bar">
+                            <div class="buttons">
+                                <div class="close"></div><div class="minimize"></div><div class="maximize"></div>
+                            </div>
+                            <div class="window-title">TQuant Lab Intro</div>
+                        </div>
+                        <div class="content">
+                            <iframe class="video-mockup" src="https://www.youtube.com/embed/mLXH2butSZo" title="Video" allowfullscreen></iframe>
+                        </div>            
                     </div>
-                </div>
-            </div>            
-        </div>
-        <div class="browser-window">
-            <div class="title-bar">
-                <div class="buttons">
-                    <div class="close"></div>
-                    <div class="minimize"></div>
-                    <div class="maximize"></div>
-                </div>
-            </div>
-            <div class="content">
-                <div class="slideshow-container">
-                    <div class="mySlides">
-                        <iframe class="video-mockup" src="https://www.youtube.com/embed/p8Eggne3XBo" 
-                        title="TEJ Pro 選股 &amp; 回測系統 EP 7" frameborder="0" allow="accelerometer; 
-                        autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; 
-                        web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+                    <div class="browser-window fade-up">
+                        <div class="title-bar">
+                            <div class="buttons">
+                                <div class="close"></div><div class="minimize"></div><div class="maximize"></div>
+                            </div>
+                            <div class="window-title">TEJ Pro EP7</div>
+                        </div>
+                        <div class="content">
+                            <iframe class="video-mockup" src="https://www.youtube.com/embed/p8Eggne3XBo" title="Video" allowfullscreen></iframe>
+                        </div>            
                     </div>
-                </div>
-            </div>            
-        </div>
-        <div class="browser-window">
-            <div class="title-bar">
-                <div class="buttons">
-                    <div class="close"></div>
-                    <div class="minimize"></div>
-                    <div class="maximize"></div>
-                </div>
-            </div>
-            <div class="content">
-                <div class="slideshow-container">
-                    <div class="mySlides">
-                        <iframe class="video-mockup" src="https://www.youtube.com/embed/GQBt6Hp7FGA" 
-                        title="TQuant Lab 系統入門教學 - 介紹 Pipeline 於交易策略使用方法" frameborder="0" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; 
-                        picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" 
-                        allowfullscreen></iframe>
+
+                    <div class="browser-window fade-up">
+                        <div class="title-bar">
+                            <div class="buttons">
+                                <div class="close"></div><div class="minimize"></div><div class="maximize"></div>
+                            </div>
+                            <div class="window-title">Pipeline Tutorial</div>
+                        </div>
+                        <div class="content">
+                            <iframe class="video-mockup" src="https://www.youtube.com/embed/GQBt6Hp7FGA" title="Video" allowfullscreen></iframe>
+                        </div>            
                     </div>
-                </div>
-            </div>            
-        </div>
-        <div class="browser-window">
-            <div class="title-bar">
-                <div class="buttons">
-                    <div class="close"></div>
-                    <div class="minimize"></div>
-                    <div class="maximize"></div>
-                </div>
-            </div>
-            <div class="content">
-                <div class="slideshow-container">
-                    <div class="mySlides">
-                        <iframe  class="video-mockup" src="https://www.youtube.com/embed/C-16Rt_xKHc" title="TEJ  Financial Database Introduction" 
-                        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                         referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+                    <div class="browser-window fade-up">
+                        <div class="title-bar">
+                            <div class="buttons">
+                                <div class="close"></div><div class="minimize"></div><div class="maximize"></div>
+                            </div>
+                            <div class="window-title">Database Intro</div>
+                        </div>
+                        <div class="content">
+                            <iframe class="video-mockup" src="https://www.youtube.com/embed/C-16Rt_xKHc" title="Video" allowfullscreen></iframe>
+                        </div>            
                     </div>
-                </div>
-            </div>            
-        </div>
-        <div class="browser-window">
-            <div class="title-bar">
-                <div class="buttons">
-                    <div class="close"></div>
-                    <div class="minimize"></div>
-                    <div class="maximize"></div>
-                </div>
-            </div>
-            <div class="content">
-                <div class="slideshow-container">
-                    <div class="mySlides">
-                        <iframe class="video-mockup" src="https://www.youtube.com/embed/YO-8lTI47ew" title="好好學校課程介紹影片" 
-                        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; 
-                        web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+                    <div class="browser-window fade-up">
+                        <div class="title-bar">
+                            <div class="buttons">
+                                <div class="close"></div><div class="minimize"></div><div class="maximize"></div>
+                            </div>
+                            <div class="window-title">Course Intro</div>
+                        </div>
+                        <div class="content">
+                            <iframe class="video-mockup" src="https://www.youtube.com/embed/YO-8lTI47ew" title="Video" allowfullscreen></iframe>
+                        </div>            
                     </div>
-                </div>
-            </div>            
-        </div>
-        <div class="browser-window">
-            <div class="title-bar">
-                <div class="buttons">
-                    <div class="close"></div>
-                    <div class="minimize"></div>
-                    <div class="maximize"></div>
-                </div>
-            </div>
-            <div class="content">
-                <div class="slideshow-container">
-                    <div class="mySlides">
-                        <iframe class="video-mockup" src="https://www.youtube.com/embed/4HOCjTKWKa8" title="TESG  解決方案 0621活動使用" 
-                        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; 
-                        web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+                    <div class="browser-window fade-up">
+                        <div class="title-bar">
+                            <div class="buttons">
+                                <div class="close"></div><div class="minimize"></div><div class="maximize"></div>
+                            </div>
+                            <div class="window-title">TESG Solution</div>
+                        </div>
+                        <div class="content">
+                            <iframe class="video-mockup" src="https://www.youtube.com/embed/4HOCjTKWKa8" title="Video" allowfullscreen></iframe>
+                        </div>            
                     </div>
+
                 </div>
-            </div>            
-        </div>
-    </section>
-    <section>
-        <div class= "title" >
-        <h1 data-text="YouTube Shorts">YouTube Shorts</h1>
-    </div>
-    </section>
-    <section class = "shorts">
-    <div class="mockup-container">
-        <div class="iphone-mockup">
-            <div class="screen">
-                <iframe class="video-mockup" src="https://www.youtube.com/embed/qQFF2Bs7abM" title="TEJ ESG 一分鐘小教室 - EP.1" frameborder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </section>
+
+        <section>
+            <div class="section-header">
+                <h2 class="section-title scram-target">Shorts</h2>
+            </div>
+            <div class="container content-wrap">
+                <div class="shorts-grid">
+                    
+                    <div class="mockup-container fade-up">
+                        <div class="iphone-mockup">
+                            <div class="screen">
+                                <iframe class="video-mockup" src="https://www.youtube.com/embed/qQFF2Bs7abM" title="Shorts 1" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mockup-container fade-up">
+                        <div class="iphone-mockup">
+                            <div class="screen">
+                                <iframe class="video-mockup" src="https://www.youtube.com/embed/B0WOgX59pdc" title="Shorts 2" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mockup-container fade-up">
+                        <div class="iphone-mockup">
+                            <div class="screen">
+                                <iframe class="video-mockup" src="https://www.youtube.com/embed/rhSpyU8OPqc" title="Shorts 3" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-links">
+            <div class="footer-item">
+                <a href="mailto:george102312@gmail.com">
+                    <img src="css/pic/gmail-logo.png" alt="Gmail">
+                    <p>Gmail</p>
+                </a>
+            </div>
+            <div class="footer-item">
+                <a href="https://www.behance.net/bc4d162c" target="_blank">
+                    <img src="css/pic/behance.png" alt="Behance">
+                    <p>Behance</p>
+                </a>
+            </div>
+             <div class="footer-item">
+                <a href="https://pda.104.com.tw/profile/share/bHw0xjl1wqi8jKoL2R9J3qNsAeIbRj9Y" target="_blank">
+                    <img src="css/pic/104_logo.png" alt="104">
+                    <p>104</p>
+                </a>
             </div>
         </div>
-    </div>
-    <div class="mockup-container">
-        <div class="iphone-mockup">
-            <div class="screen">
-                    <iframe class="video-mockup"  src="https://www.youtube.com/embed/B0WOgX59pdc" title="TEJ 一分鐘 量化金融小教室 EP 2" 
-                    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
-        </div>
-    </div>
-    <div class="mockup-container">
-        <div class="iphone-mockup">
-            <div class="screen">
-            <iframe class="video-mockup" src="https://www.youtube.com/embed/rhSpyU8OPqc" title="TEJ ESG 一分鐘小教室 - EP.1" frameborder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
-        </div>
-    </div>
-</section>
-<div class="loading-screen" id="loading-screen">
-    <img src="css/pic/circle.gif" alt="loading gif" class="loading-gif">
-    <div class="progress-bar">
-        <div class="progress" id="progress"></div>
-    </div>
-    <div class="percentage" id="percentage">0%</div>
-</div>
-    <button id="back-to-top" class="back-to-top">&#8679;</button>
+        <p class="copyright">© 2025 謝宙錡 GeorgeXIE. All Rights Reserved.</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/lenis@1.0.45/dist/lenis.min.js"></script>
+    
     <script src="js/video.js"></script>
 </body>
 </html>
