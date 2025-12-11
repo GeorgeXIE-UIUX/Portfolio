@@ -37,13 +37,13 @@ body {
 /* Loading Screen */
 #loading-screen {
     position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-    background: #1e1e1e; display: flex; flex-direction: column;
+    background: #000000; display: flex; flex-direction: column;
     align-items: center; justify-content: center; color: #ffffff;
     z-index: 10000; transition: opacity 0.5s ease; pointer-events: all;
 }
 #loading-screen[style*="opacity: 0"] { pointer-events: none; }
 .loading-gif { width: 30px; height: auto; margin-bottom: 8px; }
-.progress-bar { width: 150px; height: 3px; background: #1e1e1e; border-radius: 10px; overflow: hidden; margin-bottom: 8px; border: 1px solid #555; }
+.progress-bar { width: 150px; height: 3px; background: #000000; border-radius: 10px; overflow: hidden; margin-bottom: 8px; border: 1px solid #555; }
 .progress { height: 100%; width: 0%; background-color: #ffffff; transition: width 0.1s; }
 .percentage { font-size: 12px; color: #999; font-family: sans-serif; }
 
@@ -86,14 +86,48 @@ nav a.active::after { width: 100%; height: 1px; }
    4. Hero & Layout
    ========================================= */
 section { padding: 120px 10%; position: relative; border-top: 1px solid var(--c-border); }
-.container { max-width: 1400px; margin: 0 auto; width: 100%; }
-.section-header { 
-    position: relative; left: auto; top: auto; writing-mode: horizontal-tb; text-orientation: mixed;
-    height: auto; border-left: none; border-bottom: 1px solid var(--c-accent); padding-left: 0; padding-bottom: 20px;
-    margin: 0 auto 40px auto; width: 100%; max-width: 1400px; text-align: left; 
+/* 1. 內容容器：設定最大寬度與置中 */
+.container { 
+    width: 100%;
+    max-width: 1400px; /* 這裡的數值決定內容有多寬 */
+    margin: 0 auto;    /* 上下 0，左右自動 (置中關鍵) */
+    padding: 0;        /* 確保沒有內距影響寬度 */
 }
-.section-title { font-size: 1.5rem; letter-spacing: 0.5em; color: var(--c-text-primary); text-transform: uppercase; }
-.content-wrap { margin-left: 0; }
+
+/* 2. 標題區塊：使用與 container 完全相同的寬度設定 */
+.section-header { 
+    position: relative; /* 確保不使用 absolute 定位 */
+    
+    /* 關鍵：寬度與對齊設定必須跟 .container 一模一樣 */
+    width: 100%;
+    max-width: 1400px; 
+    margin: 0 auto 40px auto; /* 左右 auto 確保置中，下方留 40px 間距 */
+    
+    /* 樣式設定：底線與文字 */
+    border-bottom: 1px solid var(--c-accent); 
+    padding-bottom: 20px;
+    text-align: left; /* 文字靠左對齊 (在 1400px 的框框內靠左) */
+    
+    /* 重置可能殘留的舊設定 */
+    left: auto; top: auto; right: auto;
+    writing-mode: horizontal-tb;
+    text-orientation: mixed;
+    border-left: none; 
+    padding-left: 0;
+}
+
+/* 3. 確保內容包裹層沒有多餘的邊距 */
+.content-wrap { 
+    margin-left: 0 !important; /* 強制歸零 */
+}
+
+/* 2. 標題文字大小 */
+.section-title { 
+    font-size: 1.4rem; 
+    letter-spacing: 0.5em; 
+    color: var(--c-text-primary); 
+    text-transform: uppercase; 
+}
 
 .hero { height: 100vh; border-top: none; display: flex; align-items: center; justify-content: center; padding: 0; overflow: hidden; }
 .hero-inner { display: flex; align-items: center; justify-content: space-between; width: 80%; height: 70%; position: relative; }
@@ -250,7 +284,7 @@ body.hovered .cursor-outline { width: 60px; height: 60px; background-color: rgba
     #menu-toggle.active span:nth-child(2) { opacity: 0; }
     #menu-toggle.active span:nth-child(3) { transform: translateY(-9px) rotate(-45deg); }
     
-    nav { position: fixed; top: 0; left: 0; width: 100%; height: 40vh; border-radius: 0 0 16px 16px; background-color: #1e1e1e !important; display: flex; flex-direction: column; padding: 60px 0 0 0; opacity: 0; visibility: hidden; transform: translateY(-10px); transition: all 0.3s ease; z-index: 2000; overflow: hidden; }
+    nav { position: fixed; top: 0; left: 0; width: 100%; height: 40vh; border-radius: 0 0 16px 16px; background-color: #292929 !important; display: flex; flex-direction: column; padding: 60px 0 0 0; opacity: 0; visibility: hidden; transform: translateY(-10px); transition: all 0.3s ease; z-index: 2000; overflow: hidden; }
     nav.open { opacity: 1; visibility: visible; transform: translateY(0); }
     nav ul { padding:0; margin: 0; list-style: none; width: 100%; height: 100%; display: flex; flex-direction: column; justify-content: flex-start; gap:0; }
     nav ul li { width: 100%; flex: 1; display: flex; }

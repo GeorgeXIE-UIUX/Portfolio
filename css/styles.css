@@ -35,10 +35,52 @@ body {
 
 /* 通用佈局 */
 section { padding: 120px 10%; position: relative; border-top: 1px solid var(--c-border); }
-.container { max-width: 1400px; margin: 0 auto; width: 100%; }
-.section-header { position: absolute; left: 60px; top: 120px; writing-mode: vertical-rl; text-orientation: upright; height: 400px; border-left: 1px solid var(--c-accent); padding-left: 20px; }
-.section-title { font-size: 1.5rem; letter-spacing: 0.5em; color: var(--c-text-primary); text-transform: uppercase; }
-.content-wrap { margin-left: 100px; }
+/* =========================================
+   修正大螢幕對齊問題 (強制置中並統一寬度)
+   ========================================= */
+
+/* 1. 內容容器：設定最大寬度與置中 */
+.container { 
+    width: 100%;
+    max-width: 1400px; /* 這裡的數值決定內容有多寬 */
+    margin: 0 auto;    /* 上下 0，左右自動 (置中關鍵) */
+    padding: 0;        /* 確保沒有內距影響寬度 */
+}
+
+/* 2. 標題區塊：使用與 container 完全相同的寬度設定 */
+.section-header { 
+    position: relative; /* 確保不使用 absolute 定位 */
+    
+    /* 關鍵：寬度與對齊設定必須跟 .container 一模一樣 */
+    width: 100%;
+    max-width: 1400px; 
+    margin: 0 auto 40px auto; /* 左右 auto 確保置中，下方留 40px 間距 */
+    
+    /* 樣式設定：底線與文字 */
+    border-bottom: 1px solid var(--c-accent); 
+    padding-bottom: 20px;
+    text-align: left; /* 文字靠左對齊 (在 1400px 的框框內靠左) */
+    
+    /* 重置可能殘留的舊設定 */
+    left: auto; top: auto; right: auto;
+    writing-mode: horizontal-tb;
+    text-orientation: mixed;
+    border-left: none; 
+    padding-left: 0;
+}
+
+/* 3. 確保內容包裹層沒有多餘的邊距 */
+.content-wrap { 
+    margin-left: 0 !important; /* 強制歸零 */
+}
+
+/* 2. 標題文字大小 */
+.section-title { 
+    font-size: 1.4rem; 
+    letter-spacing: 0.5em; 
+    color: var(--c-text-primary); 
+    text-transform: uppercase; 
+}
 
 /* 連結與按鈕的高亮樣式 */
 .highlight { color: var(--c-text-primary); border-bottom: 1px solid var(--c-accent); }
