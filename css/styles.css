@@ -47,21 +47,20 @@ section { padding: 120px 10%; position: relative; border-top: 1px solid var(--c-
     padding: 0;        /* 確保沒有內距影響寬度 */
 }
 
-/* 2. 標題區塊：使用與 container 完全相同的寬度設定 */
 .section-header { 
-    position: relative; /* 確保不使用 absolute 定位 */
+    position: relative; 
     
-    /* 關鍵：寬度與對齊設定必須跟 .container 一模一樣 */
-    width: 100%;
-    max-width: 1400px; 
-    margin: 0 auto 40px auto; /* 左右 auto 確保置中，下方留 40px 間距 */
+    /* --- 核心修正：寬度設定完全比照 .container --- */
+    width: 100%;             /* 佔滿 section 的可用空間 */
+    max-width: 1400px;       /* 限制最大寬度與 container 一致 */
+    margin: 0 auto 40px auto; /* 上下置中 (左右 auto) */
     
-    /* 樣式設定：底線與文字 */
+    /* 樣式設定 */
     border-bottom: 1px solid var(--c-accent); 
     padding-bottom: 20px;
-    text-align: left; /* 文字靠左對齊 (在 1400px 的框框內靠左) */
+    text-align: left; 
     
-    /* 重置可能殘留的舊設定 */
+    /* 重置設定 */
     left: auto; top: auto; right: auto;
     writing-mode: horizontal-tb;
     text-orientation: mixed;
@@ -69,9 +68,9 @@ section { padding: 120px 10%; position: relative; border-top: 1px solid var(--c-
     padding-left: 0;
 }
 
-/* 3. 確保內容包裹層沒有多餘的邊距 */
+/* 3. 確保內容包裹層與標題一樣置中 */
 .content-wrap { 
-    margin-left: 0 !important; /* 強制歸零 */
+    margin: 0 auto !important; /* 修改為 auto，讓它跟隨 container 的設定置中 */
 }
 
 /* 2. 標題文字大小 */
@@ -493,7 +492,22 @@ body.hovered .cursor-outline { width: 60px; height: 60px; background-color: rgba
     section { padding: 80px 20px; }
     .container { width: 100%; }
     
-    .section-header { position: relative; writing-mode: horizontal-tb; left: 0; top: 0; height: auto; margin-bottom: 40px; border-left: none; border-bottom: 1px solid var(--c-accent); padding-bottom: 10px; padding-left: 0; width: fit-content; }
+    .section-header { 
+        position: relative; 
+        writing-mode: horizontal-tb; 
+        left: 0; 
+        top: 0; 
+        height: auto; 
+        margin-bottom: 40px; 
+        border-left: none; 
+        border-bottom: 1px solid var(--c-accent); 
+        padding-bottom: 10px; 
+        padding-left: 0; 
+        
+        /* --- 這裡是最關鍵的修改 --- */
+        width: 100%;  
+        max-width: 100%; /* 手機版通常不需要 1400px 限制，直接填滿 padding 內的空間 */
+    }
     .content-wrap { margin-left: 0; }
 
     /* About Me */

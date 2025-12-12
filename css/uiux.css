@@ -69,9 +69,8 @@ section { padding: 120px 10%; position: relative; border-top: 1px solid var(--c-
     padding-left: 0;
 }
 
-/* 3. 確保內容包裹層沒有多餘的邊距 */
 .content-wrap { 
-    margin-left: 0 !important; /* 強制歸零 */
+    margin: 0 auto !important; /* 修改為 auto，讓它跟隨 container 的設定置中 */
 }
 
 /* 2. 標題文字大小 */
